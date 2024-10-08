@@ -60,6 +60,7 @@ public class Player : MonoBehaviour
             var transformX = Mathf.Clamp(transform.position.x, MinX + RenderWidth, MaxX - RenderWidth);
             var transformY = Mathf.Clamp(transform.position.y, MinY + RenderHeight, MaxY - RenderHeight);
             Stucked = Stucked == false ? !(transformX == transform.position.x && transformY == transform.position.y) : Stucked;
+            transform.position = new Vector3(transformX, transformY, transform.position.z);
             if (Input.GetKeyDown(KeyCode.Z))
             {
                 RotationXMin = -RotationXMin;
