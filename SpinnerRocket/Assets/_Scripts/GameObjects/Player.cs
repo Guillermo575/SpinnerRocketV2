@@ -6,16 +6,13 @@ public class Player : MonoBehaviour
     #region Unity Variables
     private new Transform transform;
     private new Renderer renderer;
-    #endregion
-
-    #region InGame Variables
-    [HideInInspector] public bool InMovement = false;
-    [HideInInspector] public bool IsDeath = false;
-    [HideInInspector] public bool Stucked = false;
-    [HideInInspector] public float SpeedObject = 0;
-    [HideInInspector] public GameManager gameManager;
-    [HideInInspector] public AudioManager audioManager;
-    [HideInInspector] public float FraccAngle = 360 / 8;
+    private bool InMovement = false;
+    private bool IsDeath = false;
+    private bool Stucked = false;
+    private float SpeedObject = 0;
+    private GameManager gameManager;
+    private AudioManager audioManager;
+    private float FraccAngle = 360 / 8;
     #endregion
 
     #region Editor Variables

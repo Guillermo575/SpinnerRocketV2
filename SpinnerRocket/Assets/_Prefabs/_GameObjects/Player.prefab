@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7350053539431049088}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3308196567599784921}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -69,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 636d07c96598d66488ed7d82e29b94d3, type: 2}
+  - {fileID: 2100000, guid: 8541cb2e756002c4790821411e118645, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,13 +126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c05e0583861579d45b60d393d69ce103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transform: {fileID: 0}
-  renderer: {fileID: 0}
   InMovement: 0
   IsDeath: 0
   Stucked: 0
   SpeedObject: 0
-  GameManager: {fileID: 0}
+  gameManager: {fileID: 0}
   audioManager: {fileID: 0}
   FraccAngle: 45
   ParticleLaunch: {fileID: 3101859335265034390}
@@ -170,7 +168,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 8
   m_CollisionDetection: 0
 --- !u!1001 &1563581174195068339
 PrefabInstance:
