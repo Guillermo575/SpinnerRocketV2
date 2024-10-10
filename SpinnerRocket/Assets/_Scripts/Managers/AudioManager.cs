@@ -116,7 +116,7 @@ public class AudioManager : MonoBehaviour
     {
         try
         {
-            if (clip == null) return;
+            if (clip == null || audioSource == null || audioSource.clip == null) return;
             if (clip.name == audioSource.clip.name && !ReiniciarRepetido) return;
             audioSource.clip = clip;
             audioSource.Play();

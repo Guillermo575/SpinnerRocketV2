@@ -4,8 +4,8 @@ using System.Collections;
 public class Player : MonoBehaviour
 {
     #region Unity Variables
-    [HideInInspector] public new Transform transform;
-    [HideInInspector] public new Renderer renderer;
+    private new Transform transform;
+    private new Renderer renderer;
     #endregion
 
     #region InGame Variables
@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     [HideInInspector] public bool IsDeath = false;
     [HideInInspector] public bool Stucked = false;
     [HideInInspector] public float SpeedObject = 0;
-    [HideInInspector] public GameManager GameManager;
+    [HideInInspector] public GameManager gameManager;
     [HideInInspector] public AudioManager audioManager;
     [HideInInspector] public float FraccAngle = 360 / 8;
     #endregion
@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
     #region General
     void Start()
     {
-        GameManager = GameManager.GetSingleton();
+        gameManager = GameManager.GetSingleton();
         audioManager = AudioManager.GetSingleton();
         transform = GetComponent<Transform>();
         renderer = GetComponent<Renderer>();
@@ -49,12 +49,12 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        if (!IsDeath && GameManager.IsGameStart && GameManager.IsGameActive)
+        if (!IsDeath && gameManager.IsGameStart && gameManager.IsGameActive)
         {
-            var MinX = GameManager.MinValues.x;
-            var MinY = GameManager.MinValues.y;
-            var MaxX = GameManager.MaxValues.x;
-            var MaxY = GameManager.MaxValues.y;
+            var MinX = gameManager.MinValues.x;
+            var MinY = gameManager.MinValues.y;
+            var MaxX = gameManager.MaxValues.x;
+            var MaxY = gameManager.MaxValues.y;
             var RenderWidth = (renderer.bounds.size.x / 2);
             var RenderHeight = (renderer.bounds.size.y / 2);
             var transformX = Mathf.Clamp(transform.position.x, MinX + RenderWidth, MaxX - RenderWidth);
@@ -93,7 +93,7 @@ public class Player : MonoBehaviour
                 }
                 MoveArrow((float)IncreaseSpeed);
             }
-            if(GameManager.IsGameOver || GameManager.IsLevelCleared)
+            if(gameManager.IsGameOver || gameManager.IsLevelCleared)
             {
                 StopArrow();
             }
@@ -102,9 +102,9 @@ public class Player : MonoBehaviour
     #endregion
 
     #region Collider
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (GameManager.IsGameStart)
+        if (gameManager.IsGameStart)
         {
             if (collision.gameObject.tag == "Door")
             {
@@ -112,7 +112,7 @@ public class Player : MonoBehaviour
                 if(DoorAnimator.GetBool("Opened"))
                 {
                     audioManager.PlaySound(ClipLevelCleared);
-                    GameManager.GameLevelCleared();
+                    gameManager.GameLevelCleared();
                     DoorAnimator.SetBool("Opened", false);
                     renderer.enabled = false;
                     StopArrow();
@@ -122,8 +122,8 @@ public class Player : MonoBehaviour
             {
                 audioManager.PlaySound(ClipStarPick);
                 ParticleBling.Play();
-                collision.gameObject.transform.position = new Vector3(GameManager.mathRNG.NextValueFloat(-9, 9), GameManager.mathRNG.NextValueFloat(-5, 5), 0);
-                GameManager.AddScore(1);
+                collision.gameObject.transform.position = new Vector3(gameManager.mathRNG.NextValueFloat(-9, 9), gameManager.mathRNG.NextValueFloat(-5, 5), 0);
+                gameManager.AddScore(1);
             }
             if (collision.gameObject.tag == "StarLevel")
             {
@@ -133,7 +133,7 @@ public class Player : MonoBehaviour
                     StartCoroutine(CoroutineStarPick(objRender));
                 }
             }
-            if (collision.gameObject.tag == "Obstaculo" && !GameManager.IsGameEnd && !GameManager.IsInvencibleMode)
+            if (collision.gameObject.tag == "Obstaculo" && !gameManager.IsGameEnd && !gameManager.IsInvencibleMode)
             {
                 StartCoroutine(CoroutineDeath());
             }
@@ -144,7 +144,7 @@ public class Player : MonoBehaviour
         audioManager.PlaySound(ClipStarPick);
         ParticleBling.Play();
         objRender.enabled = false;
-        GameManager.AddScore(1);
+        gameManager.AddScore(1);
         Time.timeScale = 0.1f;
         yield return new WaitForSecondsRealtime(0.1f);
         Time.timeScale = 1;
@@ -156,14 +156,14 @@ public class Player : MonoBehaviour
         StopArrow();
         ParticleLaunch.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         Time.timeScale = .0f;
-        yield return new WaitForSecondsRealtime(0.2f);
-        Time.timeScale = .4f;
+        yield return new WaitForSecondsRealtime(0.3f);
         audioManager.PlaySound(ClipExplosion);
         ParticleBurst.Play();
         renderer.enabled = false;
-        yield return new WaitForSecondsRealtime(0.4f);
-        GameManager.GameOver();
-        yield return new WaitForSecondsRealtime(3);
+        Time.timeScale = .2f;
+        yield return new WaitForSecondsRealtime(0.5f);
+        gameManager.GameOver();
+        yield return new WaitForSecondsRealtime(4);
         Time.timeScale = 1;
     }
     #endregion

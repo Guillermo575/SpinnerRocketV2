@@ -198,7 +198,7 @@ public class GameManager : MonoBehaviour
         OnGameStart += delegate { _GameStart = true; Time.timeScale = 1; };
         OnGamePause += delegate { Time.timeScale = 0; };
         OnGameResume += delegate { Time.timeScale = 1; };
-        OnGameEnd += delegate { _GameStart = false; Time.timeScale = 0; };
+        OnGameEnd += delegate { _GameStart = false; };
         OnGameOver += delegate { OnGameEnd(); };
         OnGameLevelCleared += delegate { OnGameEnd(); };
         OnGameExit += delegate { Time.timeScale = 1; };

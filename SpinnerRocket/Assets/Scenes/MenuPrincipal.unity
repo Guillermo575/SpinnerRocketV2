@@ -566,10 +566,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2007298053589569402, guid: 06e7058add700d74fa0cf9d01f0beff8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2391831045627690514, guid: 06e7058add700d74fa0cf9d01f0beff8,
         type: 3}
       propertyPath: m_Name
       value: MenuManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480634835085146323, guid: 06e7058add700d74fa0cf9d01f0beff8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8028065932761533609, guid: 06e7058add700d74fa0cf9d01f0beff8,
         type: 3}
