@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
     /** Indica si el juego termino (nivel completado o es Game Over)*/
     public bool IsGameEnd { get { return _GameEnd; } }
     /** Indica si el juego no esta pausado ni terminado*/
-    public bool IsGameActive { get { return !_GameEnd && !_GamePause && !LevelCleared; } }
+    public bool IsGameActive { get { return _GameStart && !_GameEnd && !_GamePause && !LevelCleared; } }
     #endregion
 
     #region GamePause

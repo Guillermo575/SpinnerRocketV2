@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpeedMovement: 3
-  IsStalker: 0
+  IsStalker: 1
   StalkRange: 12
 --- !u!212 &2778392396595172277
 SpriteRenderer:

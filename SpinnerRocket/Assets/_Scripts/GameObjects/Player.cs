@@ -101,12 +101,20 @@ public class Player : MonoBehaviour
     #region Collider
     private void OnCollisionEnter(Collision collision)
     {
+        CollisionDetection(collision.gameObject, collision.gameObject.tag);
+    }
+    private void OnTriggerEnter(Collider collision)
+    {
+        CollisionDetection(collision.gameObject, collision.gameObject.tag);
+    }
+    private void CollisionDetection(GameObject gameObject, string CollisionTag)
+    {
         if (gameManager.IsGameStart)
         {
-            if (collision.gameObject.tag == "Door")
+            if (CollisionTag == "Door")
             {
-                var DoorAnimator = collision.gameObject.GetComponent<Animator>();
-                if(DoorAnimator.GetBool("Opened"))
+                var DoorAnimator = gameObject.GetComponent<Animator>();
+                if (DoorAnimator.GetBool("Opened"))
                 {
                     audioManager.PlaySound(ClipLevelCleared);
                     gameManager.GameLevelCleared();
@@ -115,22 +123,22 @@ public class Player : MonoBehaviour
                     StopArrow();
                 }
             }
-            if (collision.gameObject.tag == "Star")
+            if (CollisionTag == "Star")
             {
                 audioManager.PlaySound(ClipStarPick);
                 ParticleBling.Play();
-                collision.gameObject.transform.position = new Vector3(gameManager.mathRNG.NextValueFloat(-9, 9), gameManager.mathRNG.NextValueFloat(-5, 5), 0);
+                gameObject.transform.position = new Vector3(gameManager.mathRNG.NextValueFloat(-9, 9), gameManager.mathRNG.NextValueFloat(-5, 5), 0);
                 gameManager.AddScore(1);
             }
-            if (collision.gameObject.tag == "StarLevel")
+            if (CollisionTag == "StarLevel")
             {
-                var objRender = collision.gameObject.GetComponent<Renderer>();
-                if(objRender.enabled)
+                var objRender = gameObject.GetComponent<Renderer>();
+                if (objRender.enabled)
                 {
                     StartCoroutine(CoroutineStarPick(objRender));
                 }
             }
-            if (collision.gameObject.tag == "Obstaculo" && !gameManager.IsGameEnd && !gameManager.IsInvencibleMode)
+            if (gameObject.tag == "Obstaculo" && !gameManager.IsGameEnd && !gameManager.IsInvencibleMode)
             {
                 StartCoroutine(CoroutineDeath());
             }

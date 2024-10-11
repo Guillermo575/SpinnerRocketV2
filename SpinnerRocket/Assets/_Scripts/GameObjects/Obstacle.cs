@@ -69,15 +69,18 @@ public class Obstacle : MonoBehaviour
     public void setSpeed(float Speed)
     {
         Vector3 direction = objTarget.transform.position - transform.position;
+        direction.z = 0;
         direction.Normalize();
         transform.position += direction * Speed * Time.deltaTime;
     }
     public void RotateTowards(Vector2 target)
     {
-        Vector3 direction = objTarget.transform.position - transform.position;
+        var targetPosition = target == null ? new Vector2(0f, 0f) : target;
+        var offset = 180f;
+        Vector2 direction = (Vector2)transform.position - targetPosition;
+        direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 1 * Time.deltaTime);
+        transform.rotation = Quaternion.Euler(Vector3.forward * (angle + offset));
     }
     #endregion
 }
