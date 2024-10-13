@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Material_Asteroid
-  m_Shader: {fileID: -6465566751694194690, guid: ae6d011972657b54691b43bb7a6f142d,
+  m_Shader: {fileID: -6465566751694194690, guid: 58d6e76d6e1557d43972b2c684637ee2,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
