@@ -9,6 +9,7 @@ namespace GameElement
         private GameManager gameManager;
         private GameObject objTarget;
         private bool targetLock = false;
+        private Vector3 direction = Vector3.zero;
         public float SpeedMovement = 3;
         public bool IsStalker = false;
         public float StalkRange = 12;
@@ -41,10 +42,13 @@ namespace GameElement
                 {
                     transform.position = gameManager.mathRNG.getRandomSpawnPoint(gameManager.MinValues, gameManager.MaxValues);
                     RotateTowards(objTarget == null ? new Vector3(0f, 0f, 0f) : objTarget.transform.position);
+                    direction = Vector3.zero;
                 }
                 if(!IsStalker)
                 {
-                    setSpeed(SpeedMovement);
+                    if (direction == Vector3.zero)
+                        setSpeed(SpeedMovement);
+                    transform.position += direction * SpeedMovement * Time.deltaTime;
                 }
                 else
                 {
@@ -70,7 +74,7 @@ namespace GameElement
         #region setDirection
         public void setSpeed(float Speed)
         {
-            Vector3 direction = objTarget.transform.position - transform.position;
+            direction = objTarget.transform.position - transform.position;
             direction.z = 0;
             direction.Normalize();
             transform.position += direction * Speed * Time.deltaTime;
