@@ -47,6 +47,10 @@ public class AudioManager : MonoBehaviour
      */
     public Opciones opciones;
     /**
+     * Indica si tiene sonido o no
+     */
+    public bool IsMute = false;
+    /**
      * Objeto de la clase AudioSource que reproduce el sonido de fondo (BGM)
      */
     private AudioSource audioSource;
@@ -124,6 +128,24 @@ public class AudioManager : MonoBehaviour
         catch (Exception e)
         {
             UnityEngine.Debug.LogException(e);
+        }
+    }
+    #endregion
+
+    #region General
+    public void ToogleMute()
+    {
+        if (!IsMute)
+        {
+            SetBGMVolume(0);
+            SetSFXVolume(0);
+            IsMute = true;
+        }
+        else
+        {
+            SetBGMVolume(opciones.VolumenMusica);
+            SetSFXVolume(opciones.VolumenSonido);
+            IsMute = false;
         }
     }
     #endregion
