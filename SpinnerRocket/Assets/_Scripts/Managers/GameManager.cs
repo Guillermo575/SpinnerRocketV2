@@ -91,6 +91,7 @@ public class GameManager : MonoBehaviour
     private bool _InvencibleMode = false;
     /** Indica si el juego se encuentra en modo de invencibilidad, al estar asi no puedes perder*/
     public bool IsInvencibleMode { get { return _InvencibleMode; } }
+    public void setInvencibleMode(bool _InvencibleMode) { this._InvencibleMode = _InvencibleMode; }
     #endregion
 
     #region Score
@@ -132,6 +133,8 @@ public class GameManager : MonoBehaviour
     public AudioClip ClipGameOver;
     /** Objeto que funciona como delimitador interno de los limites del escenario*/
     public GameObject objLimites;
+    /** Nombre del nivel que vera el jugador*/
+    public String LevelName;
     #endregion
 
     #region EventHandlers
