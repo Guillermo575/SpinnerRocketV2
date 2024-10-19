@@ -49,6 +49,7 @@ public class GameHUDBehavior : MonoBehaviour
     public TextMeshProUGUI txtHighScore;
     public TextMeshProUGUI txtTitle;
     public TextMeshProUGUI txtStarCurrent;
+    public TextMeshProUGUI txtLaunch;
     #endregion
 
     #region Start & Update
@@ -60,6 +61,7 @@ public class GameHUDBehavior : MonoBehaviour
     {
         objGameManager = GameManager.GetSingleton();
         audioManager = AudioManager.GetSingleton();
+        objGameTimeWatch = GameTimeWatch.GetSingleton();
         HUD.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0.5f * (1 - PlayerPrefs.GetFloat("masterBrightness", 1)));
         setTitle();
         switch (scoretype)
@@ -84,6 +86,10 @@ public class GameHUDBehavior : MonoBehaviour
         {
             HUD.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0.5f * (1 - PlayerPrefs.GetFloat("masterBrightness", 1)));
             PlayerPrefs.SetInt("GraphicsChanged", 0);
+        }
+        if (objGameManager.GetActualGameState() == GameManager.GameState.Preparation)
+        {
+            txtLaunch.text = objGameManager.ConteLaunch;
         }
         if (!objGameManager.IsGameStart || objGameManager.IsGamePause)
         {

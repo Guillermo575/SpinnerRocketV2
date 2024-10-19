@@ -38,6 +38,8 @@ public class GameManager : MonoBehaviour
     #region Privados
     /** @hidden*/ private AudioManager audioManager;
     /** @hidden*/ private GameState ActualGameState;
+    /** @hidden*/ private float intervaloTiempoLaunch = 0.6f;
+
     public MathRNG mathRNG = new MathRNG(3241);
     public MathRNG mathRNGOther = new MathRNG(3241);
     #endregion
@@ -112,6 +114,11 @@ public class GameManager : MonoBehaviour
     public Vector3 MaxValues { get { return _maxValues; } }
     #endregion
 
+    #region ConteoLaunch
+    /** @hidden*/ private string _ConteLaunch = String.Empty;
+    public string ConteLaunch { get { return _ConteLaunch; } }
+    #endregion
+
     #endregion
 
     #region GameState
@@ -140,6 +147,7 @@ public class GameManager : MonoBehaviour
     #region EventHandlers
     /** @hidden*/
     public delegate void GameEvent();
+    /** @hidden*/ public event GameEvent OnGamePreparation;
     /** @hidden*/ public event GameEvent OnGameStart;
     /** @hidden*/ public event GameEvent OnGamePause;
     /** @hidden*/ public event GameEvent OnGameResume;
@@ -148,6 +156,14 @@ public class GameManager : MonoBehaviour
     /** @hidden*/ public event GameEvent OnGameExit;
     /** @hidden*/ public event GameEvent OnGameLevelCleared;
 
+
+    /** Inicia el juego*/
+    public void PreparationGame()
+    {
+        _GameStart = false;
+        ActualGameState = GameState.Preparation;
+        OnGamePreparation();
+    }
     /** Inicia el juego*/
     public void StartGame()
     {
@@ -198,10 +214,11 @@ public class GameManager : MonoBehaviour
             _minValues = new Vector3(objLimites.transform.position.x - SizeTile.x, objLimites.transform.position.y - SizeTile.y, 0);
             _maxValues = new Vector3(objLimites.transform.position.x + SizeTile.x, objLimites.transform.position.y + SizeTile.y, 0);
         }
+        OnGamePreparation += delegate { StartCoroutine(CoroutinePrepareLaunch()); };
         OnGameStart += delegate { _GameStart = true; Time.timeScale = 1; };
         OnGamePause += delegate { Time.timeScale = 0; };
         OnGameResume += delegate { Time.timeScale = 1; };
-        OnGameEnd += delegate { _GameStart = false; };
+        OnGameEnd += delegate { _GameStart = false; ActualGameState = GameState.Ended; };
         OnGameOver += delegate { OnGameEnd(); };
         OnGameLevelCleared += delegate { OnGameEnd(); };
         OnGameExit += delegate { Time.timeScale = 1; };
@@ -215,7 +232,8 @@ public class GameManager : MonoBehaviour
             OnGameLevelCleared += delegate { audioManager.PlaySound(ClipLevelCleared); };
             OnGameOver += delegate { audioManager.PlaySound(ClipGameOver); };
         }
-        OnGameStart();
+        //OnGameStart();
+        PreparationGame();
     }
     /** @hidden*/
     private void Update()
@@ -229,6 +247,16 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         CreateSingleton();
+    }
+    IEnumerator CoroutinePrepareLaunch()
+    {
+        for (int l = 3; l > 0 && !_GameStart; l--)
+        {
+            _ConteLaunch = l.ToString();
+            yield return new WaitForSeconds(intervaloTiempoLaunch);
+        }
+        _ConteLaunch = String.Empty;
+        StartGame();
     }
     #endregion
 }

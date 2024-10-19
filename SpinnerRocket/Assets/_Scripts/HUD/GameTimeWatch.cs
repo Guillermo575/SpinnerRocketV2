@@ -42,7 +42,7 @@ public class GameTimeWatch : MonoBehaviour
     }
     public void Update()
     {
-        if(Started)
+        if (Started)
         {
             currentTime += 1 * Time.deltaTime;
         }
