@@ -59,6 +59,7 @@ MonoBehaviour:
   - {fileID: 4500806394181221210}
   - {fileID: 18464302549142434}
   opciones: {fileID: 11400000, guid: 8cbfcb72a256af64db59ce84265974c8, type: 2}
+  highScore: {fileID: 11400000, guid: a476a4712ae8e3b43a309b499ac3699f, type: 2}
   menuConfirmar: {fileID: 6353529237004151207}
 --- !u!114 &2673418557956160461
 MonoBehaviour:
@@ -74,6 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjetosAGuardar:
   - {fileID: 11400000, guid: 8cbfcb72a256af64db59ce84265974c8, type: 2}
+  - {fileID: 11400000, guid: a476a4712ae8e3b43a309b499ac3699f, type: 2}
 --- !u!1001 &804859410091210660
 PrefabInstance:
   m_ObjectHideFlags: 0

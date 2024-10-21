@@ -43,6 +43,7 @@ public class MenuManager : MonoBehaviour
     [HideInInspector] public List<GameObject> lstMenuTree;
     public List<GameObject> lstMenus;
     public Opciones opciones;
+    public HighScore highScore;
     public MenuConfirmar menuConfirmar;
     #endregion
 

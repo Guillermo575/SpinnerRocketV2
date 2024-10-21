@@ -28,8 +28,10 @@ public class GameTimeWatch : MonoBehaviour
     #endregion
 
     #region Variables
-    [HideInInspector] public float currentTime = 0.0f;
-    [HideInInspector] public bool Started = false;
+    private float _currentTime = 0.0f;
+    private bool Started = false;
+    private MenuManager menuManager;
+    public float currentTime { get { return _currentTime; } }
     #endregion
 
     #region Start & Update
@@ -39,12 +41,13 @@ public class GameTimeWatch : MonoBehaviour
     }
     public void Start()
     {
+        menuManager = MenuManager.GetSingleton();
     }
     public void Update()
     {
         if (Started)
         {
-            currentTime += 1 * Time.deltaTime;
+            _currentTime += 1 * Time.deltaTime;
         }
     }
     #endregion
@@ -52,7 +55,7 @@ public class GameTimeWatch : MonoBehaviour
     #region Start & Stop timer
     public void StartTimer()
     {
-        currentTime = 0.0f;
+        _currentTime = 0.0f;
         Started = true;
     }
     public void StopTimer()
@@ -62,29 +65,9 @@ public class GameTimeWatch : MonoBehaviour
     #endregion
 
     #region Get & Set
-    public bool SetRecord(string name)
-    {
-        var record = PlayerPrefs.GetFloat(name, -1);
-        if(record < 0 || (record >= 0 && record > currentTime))
-        {
-            PlayerPrefs.SetFloat(name, currentTime);
-            return true;
-        }
-        return false;
-    }
     public string GetCurrentTimer()
     {
-        var record = currentTime;
-        string ret = string.Empty;
-        if (record >= 0)
-        {
-            ret = Mathf.Round(record / 60) + ":" + ((int)Mathf.Round(record % 60)).ToString("00");
-        }
-        return ret;
-    }
-    public string GetRecord(string name)
-    {
-        var record = PlayerPrefs.GetFloat(name, -1);
+        var record = _currentTime;
         string ret = string.Empty;
         if (record >= 0)
         {

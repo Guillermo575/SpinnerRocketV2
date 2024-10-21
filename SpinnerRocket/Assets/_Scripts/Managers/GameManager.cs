@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     /** @hidden*/ private AudioManager audioManager;
     /** @hidden*/ private GameState ActualGameState;
     /** @hidden*/ private float intervaloTiempoLaunch = 0.6f;
-
+    /** @hidden*/ private GameTimeWatch objGameTimeWatch;
     public MathRNG mathRNG = new MathRNG(3241);
     public MathRNG mathRNGOther = new MathRNG(3241);
     #endregion
@@ -215,7 +215,7 @@ public class GameManager : MonoBehaviour
             _maxValues = new Vector3(objLimites.transform.position.x + SizeTile.x, objLimites.transform.position.y + SizeTile.y, 0);
         }
         OnGamePreparation += delegate { StartCoroutine(CoroutinePrepareLaunch()); };
-        OnGameStart += delegate { _GameStart = true; Time.timeScale = 1; };
+        OnGameStart += delegate { _GameStart = true; Time.timeScale = 1; objGameTimeWatch.StartTimer(); };
         OnGamePause += delegate { Time.timeScale = 0; };
         OnGameResume += delegate { Time.timeScale = 1; };
         OnGameEnd += delegate { _GameStart = false; ActualGameState = GameState.Ended; };
@@ -227,6 +227,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         audioManager = AudioManager.GetSingleton();
+        objGameTimeWatch = GameTimeWatch.GetSingleton();
         if (audioManager != null)
         {
             OnGameLevelCleared += delegate { audioManager.PlaySound(ClipLevelCleared); };

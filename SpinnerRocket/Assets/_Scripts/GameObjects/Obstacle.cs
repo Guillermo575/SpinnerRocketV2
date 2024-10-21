@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 namespace GameElement
 {
     public class Obstacle : MonoBehaviour
@@ -21,8 +22,8 @@ namespace GameElement
             transform = GetComponent<Transform>();
             rigidbody = GetComponent<Rigidbody>();
             gameManager = GameManager.GetSingleton();
-            var objmain = GameObject.Find("Player");
-            objTarget = objmain == null ? null : objmain.gameObject;
+            var objmain = GameObject.FindObjectsByType<Player>(FindObjectsSortMode.InstanceID);
+            objTarget = objmain.Length == 0 ? null : objmain[0].gameObject;
         }
         void Update()
         {

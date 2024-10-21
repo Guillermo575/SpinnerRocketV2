@@ -35,6 +35,7 @@ public class GameHUDBehavior : MonoBehaviour
     private GameManager objGameManager;
     private GameTimeWatch objGameTimeWatch;
     private AudioManager audioManager;
+    private MenuManager menuManager;
     public GameObject HUD;
     public Image btnSoundON;
     public Image btnSoundOFF;
@@ -60,9 +61,9 @@ public class GameHUDBehavior : MonoBehaviour
     void Start()
     {
         objGameManager = GameManager.GetSingleton();
+        menuManager = MenuManager.GetSingleton();
         audioManager = AudioManager.GetSingleton();
         objGameTimeWatch = GameTimeWatch.GetSingleton();
-        HUD.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0.5f * (1 - PlayerPrefs.GetFloat("masterBrightness", 1)));
         setTitle();
         switch (scoretype)
         {
@@ -75,6 +76,13 @@ public class GameHUDBehavior : MonoBehaviour
                 txtHighScore.alignment = TextAlignmentOptions.Right;
                 break;
         }
+        objGameManager.OnGameEnd += delegate { };
+        objGameManager.OnGameLevelCleared += delegate {
+            if (scoretype == ScoreType.Timer)
+            {
+                SetTimerRecord(SceneManager.GetActiveScene().name);
+            }
+        };
     }
     void Update()
     {
@@ -82,11 +90,6 @@ public class GameHUDBehavior : MonoBehaviour
         setStarCurrent();
         btnSoundON.enabled = !audioManager.IsMute;
         btnSoundOFF.enabled = audioManager.IsMute;
-        if (PlayerPrefs.GetInt("GraphicsChanged", 0) == 1)
-        {
-            HUD.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0.5f * (1 - PlayerPrefs.GetFloat("masterBrightness", 1)));
-            PlayerPrefs.SetInt("GraphicsChanged", 0);
-        }
         if (objGameManager.GetActualGameState() == GameManager.GameState.Preparation)
         {
             txtLaunch.text = objGameManager.ConteLaunch;
@@ -116,13 +119,14 @@ public class GameHUDBehavior : MonoBehaviour
                 {
                     txtScore.text = "Score: " + objGameManager.GetScore;
                 }
-                if (PlayerPrefs.GetInt("HighScore", 0) < objGameManager.GetScore)
+                var ScorePoints = menuManager.highScore.GetScore(SceneManager.GetActiveScene().name);
+                if (ScorePoints < objGameManager.GetScore)
                 {
-                    PlayerPrefs.SetInt("HighScore", objGameManager.GetScore);
+                    menuManager.highScore.SetScore(new HighScore.Score { name = SceneManager.GetActiveScene().name, BestScore = ScorePoints });
                 }
                 if (txtHighScore != null)
                 {
-                    txtHighScore.text = "High: " + PlayerPrefs.GetInt("HighScore", 0);
+                    txtHighScore.text = "High: " + (ScorePoints < 0 ? 0 : ScorePoints);
                 }
             break;
             case ScoreType.Timer:
@@ -132,9 +136,9 @@ public class GameHUDBehavior : MonoBehaviour
                 }
                 if (txtHighScore != null)
                 {
-                    if (!string.IsNullOrEmpty(objGameTimeWatch.GetRecord(SceneManager.GetActiveScene().name)))
+                    if (!string.IsNullOrEmpty(GetRecord(SceneManager.GetActiveScene().name)))
                     {
-                        txtHighScore.text = "Score " + objGameTimeWatch.GetRecord(SceneManager.GetActiveScene().name);
+                        txtHighScore.text = "Score " + GetRecord(SceneManager.GetActiveScene().name);
                     }
                 }
             break;
@@ -160,6 +164,26 @@ public class GameHUDBehavior : MonoBehaviour
             }
             //txtStarCurrent.text = CurrentStars.Count == TotalStars.Count ? "*" + txtStarCurrent.text + "*" : txtStarCurrent.text;
         }
+    }
+    public bool SetTimerRecord(string name)
+    {
+        var record = menuManager.highScore.GetScore(name);
+        if (record < 0 || (record >= 0 && record > objGameTimeWatch.currentTime))
+        {
+            menuManager.highScore.SetScore(new HighScore.Score { name = name, BestScore = objGameTimeWatch.currentTime });
+            return true;
+        }
+        return false;
+    }
+    public string GetRecord(string name)
+    {
+        var record = menuManager.highScore.GetScore(name);
+        string ret = string.Empty;
+        if (record >= 0)
+        {
+            ret = Mathf.Round(record / 60) + ":" + ((int)Mathf.Round(record % 60)).ToString("00");
+        }
+        return ret;
     }
     #endregion
 }

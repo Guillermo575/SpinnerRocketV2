@@ -118,6 +118,7 @@ namespace GameElement
                     var DoorAnimator = gameObject.GetComponent<Animator>();
                     if (DoorAnimator.GetBool("Opened"))
                     {
+                        ParticleLaunch.Stop();
                         audioManager.PlaySound(ClipLevelCleared);
                         gameManager.GameLevelCleared();
                         DoorAnimator.SetBool("Opened", false);
