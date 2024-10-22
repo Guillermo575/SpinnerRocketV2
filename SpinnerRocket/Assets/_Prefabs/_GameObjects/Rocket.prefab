@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 997858205658239488}
   - component: {fileID: 7203882767877221042}
   - component: {fileID: 7181882083164160531}
+  - component: {fileID: -224450461679689358}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -950,6 +951,104 @@ MonoBehaviour:
   SpeedMovement: 15
   DecreaseSpeed: 0.2
   IncreaseSpeed: 0.8
+--- !u!82 &-224450461679689358
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6796238066645824026}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -3118223962957484381, guid: ed31c4575f00faa41b90a477f0b2a82a,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &185472097941514557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -976,12 +1075,12 @@ PrefabInstance:
     - target: {fileID: 5399146377742762326, guid: 61e0e48d72398e94195498dc6eb25ec7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.98608303
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5399146377742762326, guid: 61e0e48d72398e94195498dc6eb25ec7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3128209
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5399146377742762326, guid: 61e0e48d72398e94195498dc6eb25ec7,
         type: 3}
@@ -1056,12 +1155,12 @@ PrefabInstance:
     - target: {fileID: 9012150573811440908, guid: 2e2f4ffe4e0e73c47a5ee459d593b59a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.98608303
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9012150573811440908, guid: 2e2f4ffe4e0e73c47a5ee459d593b59a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3128209
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9012150573811440908, guid: 2e2f4ffe4e0e73c47a5ee459d593b59a,
         type: 3}
@@ -1136,12 +1235,12 @@ PrefabInstance:
     - target: {fileID: 6332277419306264435, guid: a4c331d65ab3ba44daf204da7eb49981,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.98608303
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6332277419306264435, guid: a4c331d65ab3ba44daf204da7eb49981,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3128209
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6332277419306264435, guid: a4c331d65ab3ba44daf204da7eb49981,
         type: 3}
