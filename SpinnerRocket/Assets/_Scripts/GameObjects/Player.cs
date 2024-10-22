@@ -15,6 +15,7 @@ namespace GameElement
         private GameManager gameManager;
         private AudioManager audioManager;
         private float FraccAngle = 360 / 8;
+        internal AudioSource SourceDisparo;
         #endregion
 
         #region Editor Variables
@@ -35,6 +36,7 @@ namespace GameElement
         {
             gameManager = GameManager.GetSingleton();
             audioManager = AudioManager.GetSingleton();
+            SourceDisparo = this.GetComponent<AudioSource>();
             transform = GetComponent<Transform>();
             renderer = GetComponent<Renderer>();
             SpeedObject = 0;
@@ -119,7 +121,8 @@ namespace GameElement
                     if (DoorAnimator.GetBool("Opened"))
                     {
                         ParticleLaunch.Stop();
-                        audioManager.PlaySound(ClipLevelCleared);
+                        audioManager.StopSound();
+                        PlayClip(ClipLevelCleared);
                         gameManager.GameLevelCleared();
                         DoorAnimator.SetBool("Opened", false);
                         renderer.enabled = false;
@@ -128,7 +131,7 @@ namespace GameElement
                 }
                 if (CollisionTag == "Star")
                 {
-                    audioManager.PlaySound(ClipStarPick);
+                    PlayClip(ClipStarPick);
                     ParticleBling.Play();
                     gameObject.transform.position = new Vector3(gameManager.mathRNG.NextValueFloat(-9, 9), gameManager.mathRNG.NextValueFloat(-5, 5), 0);
                     gameManager.AddScore(1);
@@ -149,7 +152,7 @@ namespace GameElement
         }
         IEnumerator CoroutineStarPick(Renderer objRender)
         {
-            audioManager.PlaySound(ClipStarPick);
+            PlayClip(ClipStarPick);
             ParticleBling.Play();
             objRender.enabled = false;
             gameManager.AddScore(1);
@@ -165,7 +168,8 @@ namespace GameElement
             ParticleLaunch.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
             Time.timeScale = .0f;
             yield return new WaitForSecondsRealtime(0.3f);
-            audioManager.PlaySound(ClipExplosion);
+            audioManager.StopSound();
+            PlayClip(ClipExplosion);
             ParticleBurst.Play();
             renderer.enabled = false;
             Time.timeScale = .2f;
@@ -173,6 +177,11 @@ namespace GameElement
             gameManager.GameOver();
             yield return new WaitForSecondsRealtime(4);
             Time.timeScale = 1;
+        }
+        private void PlayClip(AudioClip clip)
+        {
+            SourceDisparo.clip = clip;
+            SourceDisparo.Play();
         }
         #endregion
 

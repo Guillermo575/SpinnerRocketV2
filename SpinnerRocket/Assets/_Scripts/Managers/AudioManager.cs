@@ -130,6 +130,10 @@ public class AudioManager : MonoBehaviour
             UnityEngine.Debug.LogException(e);
         }
     }
+    public void StopSound()
+    {
+        audioSource.Stop();
+    }
     #endregion
 
     #region General
