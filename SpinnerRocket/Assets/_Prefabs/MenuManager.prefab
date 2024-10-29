@@ -308,6 +308,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuPrincipal
       objectReference: {fileID: 0}
+    - target: {fileID: 4519215049187141592, guid: ad1d01bdc32be4846977e5a44fc05d45,
+        type: 3}
+      propertyPath: m_text
+      value: SPINNER ROCKET
+      objectReference: {fileID: 0}
     - target: {fileID: 6600239677349831054, guid: ad1d01bdc32be4846977e5a44fc05d45,
         type: 3}
       propertyPath: m_IsActive

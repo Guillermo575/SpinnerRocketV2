@@ -103,6 +103,8 @@ MonoBehaviour:
   waypoints:
   - {fileID: 1014081466733231376}
   - {fileID: 4160776255168124477}
+  ClosePath: 1
+  pathSpace: 1
 --- !u!1001 &6793470090023611497
 PrefabInstance:
   m_ObjectHideFlags: 0
