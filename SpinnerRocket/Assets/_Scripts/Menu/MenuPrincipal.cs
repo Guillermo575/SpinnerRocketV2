@@ -21,6 +21,10 @@ public class MenuPrincipal : _Menu
     {
         SceneManager.LoadScene(1);
     }
+    public void ContinuarJuego()
+    {
+        SceneManager.LoadScene(menuManager.opciones.LastLevel);
+    }
     public void BackToTitle()
     {
         SceneManager.LoadScene(0);

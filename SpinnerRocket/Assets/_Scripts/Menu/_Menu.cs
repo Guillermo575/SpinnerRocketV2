@@ -6,7 +6,7 @@ using UnityEngine;
 public class _Menu : MonoBehaviour
 {
     #region Variables
-    protected MenuManager menuManager;
+    internal MenuManager menuManager;
     #endregion
 
     #region Start

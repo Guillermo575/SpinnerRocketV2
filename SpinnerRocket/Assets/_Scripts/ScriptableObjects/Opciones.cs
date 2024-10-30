@@ -13,6 +13,7 @@ public class Opciones : ObjetoPersistente
     [HideInInspector] public float MaxVolume = -60f;
     public float VolumenSonido = 0;
     public float VolumenMusica = 0;
+    public string LastLevel = "Scene_0001";
     public enum dificultad
     {
         facil,

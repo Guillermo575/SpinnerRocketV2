@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 /**
  * @file
  * @brief Administrador principal del juegol, indica las fases en que se ordena el ciclo de juego
@@ -37,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     #region Privados
     /** @hidden*/ private AudioManager audioManager;
+    /** @hidden*/ private MenuManager menuManager;
     /** @hidden*/ private GameState ActualGameState;
     /** @hidden*/ private float intervaloTiempoLaunch = 0.6f;
     /** @hidden*/ private GameTimeWatch objGameTimeWatch;
@@ -220,7 +223,7 @@ public class GameManager : MonoBehaviour
         OnGameResume += delegate { Time.timeScale = 1; };
         OnGameEnd += delegate { _GameStart = false; ActualGameState = GameState.Ended; };
         OnGameOver += delegate { OnGameEnd(); };
-        OnGameLevelCleared += delegate { OnGameEnd(); };
+        OnGameLevelCleared += delegate { OnGameEnd(); SiguienteNivel(); };
         OnGameExit += delegate { Time.timeScale = 1; };
     }
     /** @hidden*/
@@ -228,11 +231,13 @@ public class GameManager : MonoBehaviour
     {
         audioManager = AudioManager.GetSingleton();
         objGameTimeWatch = GameTimeWatch.GetSingleton();
+        menuManager = MenuManager.GetSingleton();
         if (audioManager != null)
         {
             OnGameLevelCleared += delegate { audioManager.PlaySound(ClipLevelCleared); };
             OnGameOver += delegate { audioManager.PlaySound(ClipGameOver); };
         }
+        menuManager.opciones.LastLevel = SceneManager.GetActiveScene().name;
         //OnGameStart();
         PreparationGame();
     }
@@ -258,6 +263,26 @@ public class GameManager : MonoBehaviour
         }
         _ConteLaunch = String.Empty;
         StartGame();
+    }
+    public void SiguienteNivel()
+    {
+        var siguienteNivel = SceneManager.GetActiveScene().buildIndex + 1;
+        if (SceneManager.sceneCountInBuildSettings > siguienteNivel)
+        {
+            var sceneLastName = Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(siguienteNivel));
+            if (sceneLastName.StartsWith("Scene_"))
+            {
+                menuManager.opciones.LastLevel = sceneLastName;
+            }
+            else
+            {
+                menuManager.opciones.LastLevel = "Scene_0001";
+            }
+        }
+        else
+        {
+            menuManager.opciones.LastLevel = "Scene_0001";
+        }
     }
     #endregion
 }
