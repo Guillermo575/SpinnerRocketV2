@@ -100,6 +100,15 @@ namespace GameElement
                 }
             }
         }
+        public void HideRenderers()
+        {
+            renderer.enabled = false;
+            var lstRenderer = this.gameObject.GetComponentsInChildren<MeshRenderer>();
+            foreach(var obj in lstRenderer)
+            {
+                obj.enabled = false;
+            }
+        }
         #endregion
 
         #region Collider
@@ -125,7 +134,7 @@ namespace GameElement
                         PlayClip(ClipLevelCleared);
                         gameManager.GameLevelCleared();
                         DoorAnimator.SetBool("Opened", false);
-                        renderer.enabled = false;
+                        HideRenderers();
                         StopArrow();
                     }
                 }
@@ -171,7 +180,7 @@ namespace GameElement
             audioManager.StopSound();
             PlayClip(ClipExplosion);
             ParticleBurst.Play();
-            renderer.enabled = false;
+            HideRenderers();
             Time.timeScale = .2f;
             yield return new WaitForSecondsRealtime(0.5f);
             gameManager.GameOver();
