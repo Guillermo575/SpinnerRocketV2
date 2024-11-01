@@ -276,7 +276,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                menuManager.opciones.LastLevel = "Scene_0001";
+                //menuManager.opciones.LastLevel = "Scene_0001";
             }
         }
         else
