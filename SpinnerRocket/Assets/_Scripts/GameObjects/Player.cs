@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Linq;
 using System.Collections;
+using UnityEngine.InputSystem;
 namespace GameElement
 {
     public class Player : MonoBehaviour
@@ -16,6 +17,12 @@ namespace GameElement
         private AudioManager audioManager;
         private float FraccAngle = 360 / 8;
         internal AudioSource SourceDisparo;
+        #endregion
+
+        #region Controles
+        private InputManager inputManager;
+        private InputAction inputLaunch;
+        private InputAction inputRotate;
         #endregion
 
         #region Editor Variables
@@ -36,6 +43,7 @@ namespace GameElement
         {
             gameManager = GameManager.GetSingleton();
             audioManager = AudioManager.GetSingleton();
+            inputManager = InputManager.GetSingleton();
             SourceDisparo = this.GetComponent<AudioSource>();
             transform = GetComponent<Transform>();
             renderer = GetComponent<Renderer>();
@@ -47,6 +55,13 @@ namespace GameElement
             ParticleBurst = lstBurst.Count > 0 ? lstBurst[0] : ParticleBurst;
             var lstBling = (from x in lstParticle where x.gameObject.name == ParticleBling.gameObject.name select x).ToList();
             ParticleBling = lstBling.Count > 0 ? lstBling[0] : ParticleBling;
+            inputLaunch = inputManager.GetAction("Launch");
+            inputRotate = inputManager.GetAction("Rotate");
+            inputLaunch.Enable();
+            inputRotate.Enable();
+            inputLaunch.performed += LaunchMove;
+            inputLaunch.canceled += LaunchStop;
+            inputRotate.performed += RotateMove;
         }
         void Update()
         {
@@ -62,11 +77,7 @@ namespace GameElement
                 var transformY = Mathf.Clamp(transform.position.y, MinY + RenderHeight, MaxY - RenderHeight);
                 Stucked = Stucked == false ? !(transformX == transform.position.x && transformY == transform.position.y) : Stucked;
                 transform.position = new Vector3(transformX, transformY, transform.position.z);
-                if (Input.GetKeyDown(KeyCode.Z))
-                {
-                    RotationXMin = -RotationXMin;
-                }
-                if (!Input.GetKey(KeyCode.Space))
+                if (!InMovement)
                 {
                     Stucked = false;
                     if(SpeedObject <= 0)
@@ -74,7 +85,6 @@ namespace GameElement
                         transform.Rotate(0, 0, -(RotationXMin * Time.deltaTime));
                     }
                     MoveArrow((float)-DecreaseSpeed);
-                    InMovement = false;
                     if (ParticleLaunch != null && ParticleLaunch.isPlaying)
                     {
                         ParticleLaunch.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
@@ -87,10 +97,6 @@ namespace GameElement
                     if (ParticleLaunch != null && !ParticleLaunch.isPlaying)
                     {
                         ParticleLaunch.Play(true);
-                    }
-                    if (!InMovement)
-                    {
-                        InMovement = true;
                     }
                     MoveArrow((float)IncreaseSpeed);
                 }
@@ -213,6 +219,21 @@ namespace GameElement
             SpeedObject = 0;
             Vector3 direction = transform.up;
             transform.position += direction * SpeedObject * Time.deltaTime;
+        }
+        #endregion
+
+        #region InputAction
+        private void LaunchMove(InputAction.CallbackContext obj)
+        {
+            InMovement = true;
+        }
+        private void LaunchStop(InputAction.CallbackContext obj)
+        {
+            InMovement = false;
+        }
+        private void RotateMove(InputAction.CallbackContext obj)
+        {
+            RotationXMin = -RotationXMin;
         }
         #endregion
     }
