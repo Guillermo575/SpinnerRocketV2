@@ -65,8 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "- Robin Lamb\n- Thimras \n- Mike Koenig (Soundbible)\n- Proxy Games \n-
-    Jute\r\n- artisticdude\r\n- gustavoasilveira"
+  m_text: "B\xE9zier Path Creator - Sebastian Lague"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f4bcb7337daaf134799971fa653bf70a, type: 2}
   m_sharedMaterial: {fileID: -1965837218556662869, guid: f4bcb7337daaf134799971fa653bf70a,
@@ -518,7 +517,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SFX
+  m_text: OTHER
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f4bcb7337daaf134799971fa653bf70a, type: 2}
   m_sharedMaterial: {fileID: -1965837218556662869, guid: f4bcb7337daaf134799971fa653bf70a,
@@ -900,23 +899,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Title - Agecaf
+  m_text: 'Title - CodeManu
 
-    Preparatives - brandon75689
+    Ending - Onky
 
-    Game Over - Kim Lightyear
+    Space Journey - Nia Mi
 
-    Victory
-    - celestialghost8
-
-    Scene 1 - Alexandr Zhelanov
-
-    Scene 2 - Tri-Tachyon
-
-    Scene
-    3 - Zander Boriega
-
-'
+    Space
+    Music - Nia Mi'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f4bcb7337daaf134799971fa653bf70a, type: 2}
   m_sharedMaterial: {fileID: -1965837218556662869, guid: f4bcb7337daaf134799971fa653bf70a,
