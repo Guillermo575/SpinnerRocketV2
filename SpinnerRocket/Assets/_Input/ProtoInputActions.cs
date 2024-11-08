@@ -252,17 +252,6 @@ public partial class @ProtoInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""ddea3ab2-a879-458e-a946-a38c65ae5dc2"",
-                    ""path"": ""<Touchscreen>/Press"",
-                    ""interactions"": ""Press(behavior=1)"",
-                    ""processors"": """",
-                    ""groups"": ""Touch"",
-                    ""action"": ""Launch"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""1a906d9d-a130-49d4-b0c7-bdf849af8f5b"",
                     ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
@@ -312,17 +301,6 @@ public partial class @ProtoInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Rotate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""ffe76224-2b16-4eaa-9d64-c8eae18e7fad"",
-                    ""path"": ""<Touchscreen>/touch9/tap"",
-                    ""interactions"": ""Press(behavior=1)"",
-                    ""processors"": """",
-                    ""groups"": ""Touch"",
                     ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
