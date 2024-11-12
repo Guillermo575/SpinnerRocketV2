@@ -1,0 +1,36 @@
+var annotated_dup =
+[
+    [ "GameElement", "d8/d72/namespace_game_element.html", [
+      [ "BlackHole", "d0/d08/class_game_element_1_1_black_hole.html", "d0/d08/class_game_element_1_1_black_hole" ],
+      [ "DoorLevel", "dd/db5/class_game_element_1_1_door_level.html", null ],
+      [ "Obstacle", "d2/de8/class_game_element_1_1_obstacle.html", "d2/de8/class_game_element_1_1_obstacle" ],
+      [ "Player", "d2/dd7/class_game_element_1_1_player.html", "d2/dd7/class_game_element_1_1_player" ]
+    ] ],
+    [ "_Menu", "d9/d3d/class___menu.html", "d9/d3d/class___menu" ],
+    [ "AdministradorDePersistencia", "d7/d01/class_administrador_de_persistencia.html", "d7/d01/class_administrador_de_persistencia" ],
+    [ "AudioManager", "d7/d31/class_audio_manager.html", "d7/d31/class_audio_manager" ],
+    [ "GameCameraBehavior", "d8/dc6/class_game_camera_behavior.html", "d8/dc6/class_game_camera_behavior" ],
+    [ "GameCheatMode", "d3/d7a/class_game_cheat_mode.html", "d3/d7a/class_game_cheat_mode" ],
+    [ "GameHUDBehavior", "d3/d1c/class_game_h_u_d_behavior.html", "d3/d1c/class_game_h_u_d_behavior" ],
+    [ "GameManager", "db/d10/class_game_manager.html", "db/d10/class_game_manager" ],
+    [ "GameTimeWatch", "d9/d56/class_game_time_watch.html", "d9/d56/class_game_time_watch" ],
+    [ "HighScore", "dd/d8f/class_high_score.html", "dd/d8f/class_high_score" ],
+    [ "InputManager", "df/dd1/class_input_manager.html", "df/dd1/class_input_manager" ],
+    [ "InputWindow", "dd/d09/class_input_window.html", "dd/d09/class_input_window" ],
+    [ "InputWindowKeyBoard", "d1/d48/class_input_window_key_board.html", "d1/d48/class_input_window_key_board" ],
+    [ "MathRNG", "d4/d9f/class_math_r_n_g.html", "d4/d9f/class_math_r_n_g" ],
+    [ "MenuConfirmar", "de/d1c/class_menu_confirmar.html", "de/d1c/class_menu_confirmar" ],
+    [ "MenuFinNivel", "db/d0b/class_menu_fin_nivel.html", "db/d0b/class_menu_fin_nivel" ],
+    [ "MenuManager", "d9/db2/class_menu_manager.html", "d9/db2/class_menu_manager" ],
+    [ "MenuPausa", "d0/d9b/class_menu_pausa.html", "d0/d9b/class_menu_pausa" ],
+    [ "MenuPrincipal", "db/df3/class_menu_principal.html", "db/df3/class_menu_principal" ],
+    [ "ObjectActiveAtStart", "db/ddd/class_object_active_at_start.html", null ],
+    [ "ObjectHideNoAndroid", "d2/d08/class_object_hide_no_android.html", null ],
+    [ "ObjectInvisibleAtStart", "da/d98/class_object_invisible_at_start.html", "da/d98/class_object_invisible_at_start" ],
+    [ "ObjetoPersistente", "d5/d33/class_objeto_persistente.html", "d5/d33/class_objeto_persistente" ],
+    [ "Opciones", "d5/db9/class_opciones.html", "d5/db9/class_opciones" ],
+    [ "SceneLoadManager", "d4/d2c/class_scene_load_manager.html", "d4/d2c/class_scene_load_manager" ],
+    [ "SliderVolumenMusica", "d8/d60/class_slider_volumen_musica.html", "d8/d60/class_slider_volumen_musica" ],
+    [ "SliderVolumenSonido", "d1/d58/class_slider_volumen_sonido.html", "d1/d58/class_slider_volumen_sonido" ],
+    [ "SpawnObject", "d7/d5f/class_spawn_object.html", "d7/d5f/class_spawn_object" ]
+];
