@@ -9,6 +9,7 @@
 /SpinnerRocket/[Bb]uilds/
 /SpinnerRocket/[Ll]ogs/
 /SpinnerRocket/[Mm]emoryCaptures/
+/SpinnerRocket/[Uu]serSettings/
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
