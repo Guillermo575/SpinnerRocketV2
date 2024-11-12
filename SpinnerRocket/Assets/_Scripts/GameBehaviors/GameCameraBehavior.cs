@@ -1,4 +1,8 @@
 ﻿using UnityEngine;
+/**
+ * @file
+ * @brief Maneja el control de la camara, hace que no se mueva de manera rigida
+ */
 public class GameCameraBehavior : MonoBehaviour
 {
     #region Variables

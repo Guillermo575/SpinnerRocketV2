@@ -3,6 +3,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+/**
+ * @file
+ * @brief Administra las funciones de la interfaz de usuario
+ */
 public class GameHUDBehavior : MonoBehaviour
 {
     #region Singleton

@@ -1,4 +1,8 @@
 ﻿using UnityEngine;
+/**
+ * @file
+ * @brief Reloj que cuenta los segundos transcurridos
+ */
 public class GameTimeWatch : MonoBehaviour
 {
     #region Singleton

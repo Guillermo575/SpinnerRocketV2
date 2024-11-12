@@ -6,7 +6,10 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.EnhancedTouch;
 using UnityEngine.Windows;
 using static InputManager.ActionMap.Action;
-
+/**
+ * @file
+ * @brief maneja los inputs del proyecto
+ */
 public class InputManager : MonoBehaviour
 {
     #region Singleton
@@ -130,6 +133,8 @@ public class InputManager : MonoBehaviour
         return obj;
     }
     #endregion
+
+    #region ActionMap
     public class ActionMap
     {
         public string name;
@@ -158,4 +163,5 @@ public class InputManager : MonoBehaviour
             }
         }
     }
+    #endregion
 }

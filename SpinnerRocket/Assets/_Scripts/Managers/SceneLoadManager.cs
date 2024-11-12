@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+/**
+ * @file
+ * @brief Clase que maneja el desvanecimiento de un objeto, sirve para hacer transiciones entre escenario
+ */
 public class SceneLoadManager : MonoBehaviour
 {
     public Image fadeImage; // Imagen que se usará para el desvanecimiento

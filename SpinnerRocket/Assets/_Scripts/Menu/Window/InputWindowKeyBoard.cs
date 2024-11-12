@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+/**
+ * @file
+ * @brief Clase que muestra los botones de cada accion y los coloca en una ventana
+ */
 public class InputWindowKeyBoard : MonoBehaviour
 {
     private InputManager inputManager;

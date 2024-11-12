@@ -1,7 +1,7 @@
 using UnityEngine;
 /**
  * @file
- * @brief Clase padre que guarda
+ * @brief Clase padre que guarda las caracteristicas principales del menu
  */
 public class _Menu : MonoBehaviour
 {

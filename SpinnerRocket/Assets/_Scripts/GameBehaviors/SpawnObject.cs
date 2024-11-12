@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
+/**
+ * @file
+ * @brief Genera objetos aleatorios al inicio del escenario
+ */
 public class SpawnObject : MonoBehaviour
 {
     #region Hidden

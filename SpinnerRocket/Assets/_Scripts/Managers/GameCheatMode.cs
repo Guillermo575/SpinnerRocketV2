@@ -1,5 +1,9 @@
 ﻿using System.Linq;
 using UnityEngine;
+/**
+ * @file
+ * @brief Administra atajos para agilizar las pruebas durante el desarrollo (se recomienda desactivar despues de hacer pruebas)
+ */
 public class GameCheatMode : MonoBehaviour
 {
     #region Variables
