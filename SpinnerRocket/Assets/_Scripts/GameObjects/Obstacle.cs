@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using UnityEngine;
 /**
- * @file
+ * @class
  * @brief GameObject del juego: Objetos moviles cuya funcion es la de colisionar con el jugador
  */
 namespace GameElement
@@ -9,9 +9,10 @@ namespace GameElement
     public class Obstacle : MonoBehaviour
     {
         #region Variables
-        private new Transform transform;
-        private new Rigidbody rigidbody;
-        private GameManager gameManager;
+        /** @hidden */  private new Transform transform;
+        /** @hidden */  private new Rigidbody rigidbody;
+        /** @hidden */  private GameManager gameManager;
+        /** Objetivo del obstaculo, el obstaculo perseguira o intentara moverse hacia la direccion donde se encuentra */ 
         private GameObject objTarget;
         private bool targetLock = false;
         private Vector3 direction = Vector3.zero;

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections;
 using UnityEngine.InputSystem;
 /**
- * @file
+ * @class
  * @brief GameObject del juego: Controla las funciones de la nave que controla el jugador
  */
 namespace GameElement

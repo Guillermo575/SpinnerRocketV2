@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using UnityEngine;
 /**
- * @file
+ * @class
  * @brief GameObject del juego: Puerta del nivel que debe de acceder el jugador para completar el nivel
  */
 namespace GameElement
@@ -9,17 +9,18 @@ namespace GameElement
     public class DoorLevel : MonoBehaviour
     {
         #region Unity Variables
-        private Animator animator;
-        private GameManager GameManager;
-        private int ScoreLevel =0;
+        /** @hidden */   private Animator animator;
+        /** @hidden */   private GameManager GameManager;
         #endregion
 
         #region Start & Update
+        /** Inicializacion de los objetos */
         void Start()
         {
             animator = GetComponent<Animator>();
             GameManager = GameManager.GetSingleton();
         }
+        /** Metodo de actualizacion que revisa la cantidad de estrellas del nivel, en caso de no haber estrellas la puerta se abrira*/
         void Update()
         {
             var objects = GameObject.FindGameObjectsWithTag("StarLevel").Where(obj => obj.GetComponent<Renderer>().enabled).ToList();

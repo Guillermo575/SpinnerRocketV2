@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 /**
- * @file
+ * @class
  * @brief Genera objetos aleatorios al inicio del escenario
  */
 public class SpawnObject : MonoBehaviour
@@ -12,25 +12,32 @@ public class SpawnObject : MonoBehaviour
     #endregion
 
     #region Editor Variables
+    /** Objeto que replicara la clase */
     [Header("General")]
     public GameObject obj;
+    /** Cantidad de objetos que se va a crear */
     public int Quantity;
+    /** 1: El objeto se creara en los bordes, 2: Se creara dentro del scenario */
     public enum SpawnType
     {
         Border = 1,
         InScene = 2,
     }
+    /** 1: Indica donde se creara el objeto */
     public SpawnType type;
+    /** Unidades de margen donde se creara en caso de elegir que el objeto se creara por los bordes */
     [Header("Scene Bounds")]
     public float OffSetUnits;
     #endregion
 
     #region Methods
+    /** Metodo de inicio del escenario */
     void Start()
     {
         gameManager = GameManager.GetSingleton();
         Spawn();
     }
+    /** Metodo que creara los objetos */
     public void Spawn()
     {
         lstObj = new List<GameObject>();

@@ -1,27 +1,42 @@
 ﻿using UnityEngine;
 /**
- * @file
+ * @class
  * @brief Maneja el control de la camara, hace que no se mueva de manera rigida
  */
 public class GameCameraBehavior : MonoBehaviour
 {
     #region Variables
-    [HideInInspector] public Vector3 minValues;
-    [HideInInspector] public Vector3 maxValues;
+    [HideInInspector]   private GameManager gameManager;
+
+    #region minValues
+    /** @hidden*/   private Vector3 _minValues;
+    /** @hidden*/   public Vector3 minValues { get { return _minValues; } }
+    #endregion
+
+    #region maxValues
+    /** @hidden*/   private Vector3 _maxValues;
+    /** @hidden*/   public Vector3 maxValues { get { return _maxValues; } }
+    #endregion
+
+    /** Camara que sera manipulada */ 
     public Camera Camera;
+    /** Objeto que seguira la camara */ 
     public Transform target;
+    /** Tamaño de margen */ 
     public Vector3 offset;
+    /** Escala de suavidad de movimiento de la camara */ 
     [Range(0, 10)] public float smoothFactor;
-    private GameManager gameManager;
     #endregion
 
     #region Start & Update
+    /** Carga los valores iniciales */
     void Start()
     {
         gameManager = GameManager.GetSingleton();
-        minValues = gameManager.MinValues;
-        maxValues = gameManager.MaxValues;
+        _minValues = gameManager.MinValues;
+        _maxValues = gameManager.MaxValues;
     }
+    /** Actualiza la camara del objetivo */
     void Update()
     {
         if(Camera != null)
@@ -32,6 +47,7 @@ public class GameCameraBehavior : MonoBehaviour
     #endregion
 
     #region General
+    /** Metodo que maneja el movimiento de la camara */
     public void FollowCamera()
     {
         float height = 2f * Camera.orthographicSize;
