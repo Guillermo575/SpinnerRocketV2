@@ -129,73 +129,73 @@ $(function(){initNavTree('da/d03/_game_time_watch_8cs_source.html','../../'); in
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">    #endregion</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">    #region Variables</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">private</span> <span class="keywordtype">float</span> _currentTime = 0.0f;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> Started = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">private</span> <a class="code hl_class" href="../../d9/db2/class_menu_manager.html">MenuManager</a> menuManager;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../d9/d56/class_game_time_watch.html#a19e0f1704cba403e5e4d555143af0bf7">   38</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../d9/d56/class_game_time_watch.html#a19e0f1704cba403e5e4d555143af0bf7">currentTime</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> _currentTime; } }</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">    #endregion</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">    #region Start &amp; Update</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> Awake()</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        CreateSingleton();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
-<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../d9/d56/class_game_time_watch.html#a3300991a031b48833e1529dda483cb38">   46</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d56/class_game_time_watch.html#a3300991a031b48833e1529dda483cb38">Start</a>()</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        menuManager = <a class="code hl_class" href="../../d9/db2/class_menu_manager.html">MenuManager</a>.<a class="code hl_function" href="../../d9/db2/class_menu_manager.html#a9858f83c6ae8800021575fe723620278">GetSingleton</a>();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">private</span> <span class="keywordtype">float</span> _currentTime = 0.0f;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> Started = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">private</span> <a class="code hl_class" href="../../d9/db2/class_menu_manager.html">MenuManager</a> menuManager;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d9/d56/class_game_time_watch.html#a19e0f1704cba403e5e4d555143af0bf7">   42</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../d9/d56/class_game_time_watch.html#a19e0f1704cba403e5e4d555143af0bf7">currentTime</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> _currentTime; } }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">    #endregion</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">    #region Start &amp; Update</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> Awake()</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        CreateSingleton();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../d9/d56/class_game_time_watch.html#a3300991a031b48833e1529dda483cb38">   52</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d56/class_game_time_watch.html#a3300991a031b48833e1529dda483cb38">Start</a>()</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        menuManager = <a class="code hl_class" href="../../d9/db2/class_menu_manager.html">MenuManager</a>.<a class="code hl_function" href="../../d9/db2/class_menu_manager.html#a9858f83c6ae8800021575fe723620278">GetSingleton</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
 </div>
-<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../d9/d56/class_game_time_watch.html#a8989be839e65a72e889238a3e826951e">   50</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d56/class_game_time_watch.html#a8989be839e65a72e889238a3e826951e">Update</a>()</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">if</span> (Started)</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            _currentTime += 1 * Time.deltaTime;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../d9/d56/class_game_time_watch.html#a8989be839e65a72e889238a3e826951e">   57</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d56/class_game_time_watch.html#a8989be839e65a72e889238a3e826951e">Update</a>()</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">if</span> (Started)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            _currentTime += 1 * Time.deltaTime;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
 </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">    #endregion</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">    #region Start &amp; Stop timer</span></div>
-<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../d9/d56/class_game_time_watch.html#a9434518693b0b6cc6594ab5f2f3d462b">   60</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d56/class_game_time_watch.html#a9434518693b0b6cc6594ab5f2f3d462b">StartTimer</a>()</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        _currentTime = 0.0f;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        Started = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">    #endregion</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">    #region Start &amp; Stop timer</span></div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="../../d9/d56/class_game_time_watch.html#a9434518693b0b6cc6594ab5f2f3d462b">   68</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d56/class_game_time_watch.html#a9434518693b0b6cc6594ab5f2f3d462b">StartTimer</a>()</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        _currentTime = 0.0f;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        Started = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
 </div>
-<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../d9/d56/class_game_time_watch.html#a6d65aa08bd22f32818422a87c8954606">   65</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d56/class_game_time_watch.html#a6d65aa08bd22f32818422a87c8954606">StopTimer</a>()</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        Started = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="../../d9/d56/class_game_time_watch.html#a6d65aa08bd22f32818422a87c8954606">   74</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d56/class_game_time_watch.html#a6d65aa08bd22f32818422a87c8954606">StopTimer</a>()</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        Started = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
 </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">    #endregion</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">    #region Get &amp; Set</span></div>
-<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="../../d9/d56/class_game_time_watch.html#a9d1ea4e57e94bd946d32974ea6008c98">   72</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_function" href="../../d9/d56/class_game_time_watch.html#a9d1ea4e57e94bd946d32974ea6008c98">GetCurrentTimer</a>()</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        var record = _currentTime;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">string</span> ret = <span class="keywordtype">string</span>.Empty;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">if</span> (record &gt;= 0)</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            ret = Mathf.Round(record / 60) + <span class="stringliteral">&quot;:&quot;</span> + ((int)Mathf.Round(record % 60)).ToString(<span class="stringliteral">&quot;00&quot;</span>);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">    #endregion</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">    #region Get &amp; Set</span></div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="../../d9/d56/class_game_time_watch.html#a9d1ea4e57e94bd946d32974ea6008c98">   82</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_function" href="../../d9/d56/class_game_time_watch.html#a9d1ea4e57e94bd946d32974ea6008c98">GetCurrentTimer</a>()</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        var record = _currentTime;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordtype">string</span> ret = <span class="keywordtype">string</span>.Empty;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">if</span> (record &gt;= 0)</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            ret = Mathf.Round(record / 60) + <span class="stringliteral">&quot;:&quot;</span> + ((int)Mathf.Round(record % 60)).ToString(<span class="stringliteral">&quot;00&quot;</span>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
 </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">    #endregion</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">    #endregion</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>}</div>
 </div>
 <div class="ttc" id="aclass_game_time_watch_html"><div class="ttname"><a href="../../d9/d56/class_game_time_watch.html">GameTimeWatch</a></div><div class="ttdef"><b>Definition</b> <a href="#l00006">GameTimeWatch.cs:7</a></div></div>
-<div class="ttc" id="aclass_game_time_watch_html_a19e0f1704cba403e5e4d555143af0bf7"><div class="ttname"><a href="../../d9/d56/class_game_time_watch.html#a19e0f1704cba403e5e4d555143af0bf7">GameTimeWatch.currentTime</a></div><div class="ttdeci">float currentTime</div><div class="ttdef"><b>Definition</b> <a href="#l00038">GameTimeWatch.cs:38</a></div></div>
-<div class="ttc" id="aclass_game_time_watch_html_a3300991a031b48833e1529dda483cb38"><div class="ttname"><a href="../../d9/d56/class_game_time_watch.html#a3300991a031b48833e1529dda483cb38">GameTimeWatch.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdef"><b>Definition</b> <a href="#l00046">GameTimeWatch.cs:46</a></div></div>
-<div class="ttc" id="aclass_game_time_watch_html_a6d65aa08bd22f32818422a87c8954606"><div class="ttname"><a href="../../d9/d56/class_game_time_watch.html#a6d65aa08bd22f32818422a87c8954606">GameTimeWatch.StopTimer</a></div><div class="ttdeci">void StopTimer()</div><div class="ttdef"><b>Definition</b> <a href="#l00065">GameTimeWatch.cs:65</a></div></div>
-<div class="ttc" id="aclass_game_time_watch_html_a8989be839e65a72e889238a3e826951e"><div class="ttname"><a href="../../d9/d56/class_game_time_watch.html#a8989be839e65a72e889238a3e826951e">GameTimeWatch.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition</b> <a href="#l00050">GameTimeWatch.cs:50</a></div></div>
-<div class="ttc" id="aclass_game_time_watch_html_a9434518693b0b6cc6594ab5f2f3d462b"><div class="ttname"><a href="../../d9/d56/class_game_time_watch.html#a9434518693b0b6cc6594ab5f2f3d462b">GameTimeWatch.StartTimer</a></div><div class="ttdeci">void StartTimer()</div><div class="ttdef"><b>Definition</b> <a href="#l00060">GameTimeWatch.cs:60</a></div></div>
-<div class="ttc" id="aclass_game_time_watch_html_a9d1ea4e57e94bd946d32974ea6008c98"><div class="ttname"><a href="../../d9/d56/class_game_time_watch.html#a9d1ea4e57e94bd946d32974ea6008c98">GameTimeWatch.GetCurrentTimer</a></div><div class="ttdeci">string GetCurrentTimer()</div><div class="ttdef"><b>Definition</b> <a href="#l00072">GameTimeWatch.cs:72</a></div></div>
+<div class="ttc" id="aclass_game_time_watch_html_a19e0f1704cba403e5e4d555143af0bf7"><div class="ttname"><a href="../../d9/d56/class_game_time_watch.html#a19e0f1704cba403e5e4d555143af0bf7">GameTimeWatch.currentTime</a></div><div class="ttdeci">float currentTime</div><div class="ttdoc">Obtiene el tiempo actual del reloj.</div><div class="ttdef"><b>Definition</b> <a href="#l00042">GameTimeWatch.cs:42</a></div></div>
+<div class="ttc" id="aclass_game_time_watch_html_a3300991a031b48833e1529dda483cb38"><div class="ttname"><a href="../../d9/d56/class_game_time_watch.html#a3300991a031b48833e1529dda483cb38">GameTimeWatch.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">Inicializacion de los objetos.</div><div class="ttdef"><b>Definition</b> <a href="#l00052">GameTimeWatch.cs:52</a></div></div>
+<div class="ttc" id="aclass_game_time_watch_html_a6d65aa08bd22f32818422a87c8954606"><div class="ttname"><a href="../../d9/d56/class_game_time_watch.html#a6d65aa08bd22f32818422a87c8954606">GameTimeWatch.StopTimer</a></div><div class="ttdeci">void StopTimer()</div><div class="ttdoc">Detiene el reloj.</div><div class="ttdef"><b>Definition</b> <a href="#l00074">GameTimeWatch.cs:74</a></div></div>
+<div class="ttc" id="aclass_game_time_watch_html_a8989be839e65a72e889238a3e826951e"><div class="ttname"><a href="../../d9/d56/class_game_time_watch.html#a8989be839e65a72e889238a3e826951e">GameTimeWatch.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">Agrega el tiempo transcurrido al reloj.</div><div class="ttdef"><b>Definition</b> <a href="#l00057">GameTimeWatch.cs:57</a></div></div>
+<div class="ttc" id="aclass_game_time_watch_html_a9434518693b0b6cc6594ab5f2f3d462b"><div class="ttname"><a href="../../d9/d56/class_game_time_watch.html#a9434518693b0b6cc6594ab5f2f3d462b">GameTimeWatch.StartTimer</a></div><div class="ttdeci">void StartTimer()</div><div class="ttdoc">Inicia el reloj.</div><div class="ttdef"><b>Definition</b> <a href="#l00068">GameTimeWatch.cs:68</a></div></div>
+<div class="ttc" id="aclass_game_time_watch_html_a9d1ea4e57e94bd946d32974ea6008c98"><div class="ttname"><a href="../../d9/d56/class_game_time_watch.html#a9d1ea4e57e94bd946d32974ea6008c98">GameTimeWatch.GetCurrentTimer</a></div><div class="ttdeci">string GetCurrentTimer()</div><div class="ttdoc">Devuelve el tiempo transcurrido del reloj en formato 0:00 como string.</div><div class="ttdef"><b>Definition</b> <a href="#l00082">GameTimeWatch.cs:82</a></div></div>
 <div class="ttc" id="aclass_game_time_watch_html_abdfd7baabc652edadbbad49b3f2d3a39"><div class="ttname"><a href="../../d9/d56/class_game_time_watch.html#abdfd7baabc652edadbbad49b3f2d3a39">GameTimeWatch.GetSingleton</a></div><div class="ttdeci">static GameTimeWatch GetSingleton()</div><div class="ttdoc">Solo se puede crear un objeto de la clase GameTimeWatch, este metodo obtiene el objeto creado.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">GameTimeWatch.cs:28</a></div></div>
 <div class="ttc" id="aclass_menu_manager_html"><div class="ttname"><a href="../../d9/db2/class_menu_manager.html">MenuManager</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/ddd/_menu_manager_8cs_source.html#l00011">MenuManager.cs:12</a></div></div>
 <div class="ttc" id="aclass_menu_manager_html_a9858f83c6ae8800021575fe723620278"><div class="ttname"><a href="../../d9/db2/class_menu_manager.html#a9858f83c6ae8800021575fe723620278">MenuManager.GetSingleton</a></div><div class="ttdeci">static MenuManager GetSingleton()</div><div class="ttdoc">Solo se puede crear un objeto de la clase MenuManager, este metodo obtiene el objeto creado.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/ddd/_menu_manager_8cs_source.html#l00032">MenuManager.cs:32</a></div></div>

@@ -11,38 +11,58 @@ namespace GameElement
     public class Player : MonoBehaviour
     {
         #region Unity Variables
-        private new Transform transform;
-        private new Renderer renderer;
+        /** @hidden*/ private new Transform transform;
+        /** @hidden*/ private new Renderer renderer;
+        /** @hidden*/ private GameManager gameManager;
+        /** @hidden*/ private AudioManager audioManager;
+        /** Indica si el objeto se encuentra en movimiento */
         private bool InMovement = false;
+        /** Indica si el objeto colisiono y por tanto ocurrira un game over*/
         private bool IsDeath = false;
+        /** Variable que sirve para evitar que el objeto se salga de los limites del escenario y este quede atorado en los bordes*/
         private bool Stucked = false;
+        /** Velocidad actual del objeto */
         private float SpeedObject = 0;
-        private GameManager gameManager;
-        private AudioManager audioManager;
+        /** Ajuste constante de rotacion a la cual la nave va girando */
         private float FraccAngle = 360 / 8;
+        /** Fuente de audio que usara el objeto para reproducir los sonidos */
         internal AudioSource SourceDisparo;
         #endregion
 
         #region Controles
+        /** Objeto del input manager */
         private InputManager inputManager;
+        /** InputAction que gestionara la propulsion de la nave */
         private InputAction inputLaunch;
+        /** InputAction que gestionara el cambio de rotacion */
         private InputAction inputRotate;
         #endregion
 
         #region Editor Variables
+        /** Particulas utilizadas al momento de propulsionar la nave */
         public ParticleSystem ParticleLaunch;
+        /** Particulas utilizadas al momento de que la nave se estrelle */
         public ParticleSystem ParticleBurst;
+        /** Particulas utilizadas al momento de que la nave obtenga una estrella */
         public ParticleSystem ParticleBling;
+        /** Clip de sonido que se reproducira al momento de superar un nivel */
         public AudioClip ClipLevelCleared;
+        /** Clip de Sonido que se reproducira al momento de obtener una estrella */
         public AudioClip ClipStarPick;
+        /** Clip de Sonido que se reproducira al momento de que la nave se estrelle */
         public AudioClip ClipExplosion;
+        /** Velocidad que indica cuantas veces rotara la nave por minuto */
         public int RotationXMin = 180;
+        /** Velocidad maxima de la nave al momento de hacer propulsion */
         public int SpeedMovement = 15;
+        /** Velocidad de perdida al momento de dejar de hacer propulsion por cada Update */
         public double DecreaseSpeed = 0.2;
+        /** Velocidad de incremento durante la propulsion por cada Update */
         public double IncreaseSpeed = 0.8;
         #endregion
 
         #region General
+        /** Metodo de inicio del objeto */
         void Start()
         {
             gameManager = GameManager.GetSingleton();
@@ -67,6 +87,7 @@ namespace GameElement
             inputLaunch.canceled += LaunchStop;
             inputRotate.performed += RotateMove;
         }
+        /** Metodo de actualizacion del objeto, revisa si el objeto se encuentra en movimiento, activo o en proceso de Game Over */
         void Update()
         {
             if (!IsDeath && gameManager.IsGameStart && gameManager.IsGameActive)
@@ -110,6 +131,7 @@ namespace GameElement
                 }
             }
         }
+        /** Oculta los renders de la nave */
         public void HideRenderers()
         {
             renderer.enabled = false;
@@ -122,14 +144,23 @@ namespace GameElement
         #endregion
 
         #region Collider
+        /** Metodo que se activa cuando colisiona con un objeto 
+         @param collision objeto de colision */
         private void OnCollisionEnter(Collision collision)
         {
             CollisionDetection(collision.gameObject, collision.gameObject.tag);
         }
+        /** Metodo que se activa cuando colisiona con un objeto (en caso de que este activado el IsTrigger)
+         @param collision objeto de colision
+        */
         private void OnTriggerEnter(Collider collision)
         {
             CollisionDetection(collision.gameObject, collision.gameObject.tag);
         }
+        /** Metodo de colision que se activa con OnCollisionEnter y OnTriggerEnter
+        @param gameObject objeto de colision 
+        @param CollisionTag tag del objeto de colision
+         */
         private void CollisionDetection(GameObject gameObject, string CollisionTag)
         {
             if (gameManager.IsGameStart)
@@ -169,6 +200,8 @@ namespace GameElement
                 }
             }
         }
+        /** Courutina que se activa al obtener una estrella 
+         @param objRender render de la estrella */
         IEnumerator CoroutineStarPick(Renderer objRender)
         {
             PlayClip(ClipStarPick);
@@ -179,6 +212,7 @@ namespace GameElement
             yield return new WaitForSecondsRealtime(0.1f);
             Time.timeScale = 1;
         }
+        /** Courutina que se activa al morir a causa de una colision */
         IEnumerator CoroutineDeath()
         {
             IsDeath = true;
@@ -197,6 +231,8 @@ namespace GameElement
             yield return new WaitForSecondsRealtime(4);
             Time.timeScale = 1;
         }
+        /** Metodo que reproduce un efecto de sonido 
+         @param clip audio que se reproducira*/
         private void PlayClip(AudioClip clip)
         {
             SourceDisparo.clip = clip;
@@ -205,6 +241,9 @@ namespace GameElement
         #endregion
 
         #region Set Speed
+        /** Metodo de movimiento del objeto 
+         @param Speed Velocidad de incremento de la nave
+         */
         private void MoveArrow(float Speed)
         {
             if (Stucked)
@@ -218,6 +257,7 @@ namespace GameElement
             SpeedObject = SpeedObject >= SpeedMovement ? SpeedMovement : SpeedObject;
             SpeedObject = SpeedObject <= 0 ? 0 : SpeedObject;
         }
+        /** Metodo para que se detenga del objeto */
         private void StopArrow()
         {
             SpeedObject = 0;
@@ -227,14 +267,17 @@ namespace GameElement
         #endregion
 
         #region InputAction
+        /** Metodo de inputaction cuando oprimes el boton de propulsion */
         private void LaunchMove(InputAction.CallbackContext obj)
         {
             InMovement = true;
         }
+        /** Metodo de inputaction cuando sueltas el boton de propulsion */
         private void LaunchStop(InputAction.CallbackContext obj)
         {
             InMovement = false;
         }
+        /** Metodo de inputaction cuando oprimes el boton de rotacion */
         private void RotateMove(InputAction.CallbackContext obj)
         {
             RotationXMin = -RotationXMin;

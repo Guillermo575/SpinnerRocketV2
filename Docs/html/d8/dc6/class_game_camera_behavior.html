@@ -100,10 +100,14 @@ $(function(){initNavTree('d8/dc6/class_game_camera_behavior.html','../../'); ini
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="../../de/d33/class_game_camera_behavior-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">GameCameraBehavior Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Maneja el control de la camara, hace que no se mueva de manera rigida.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for GameCameraBehavior:</div>
 <div class="dyncontent">
@@ -114,25 +118,36 @@ Inheritance diagram for GameCameraBehavior:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a16b8c98bfe225e542d41b20850b1a9de" id="r_a16b8c98bfe225e542d41b20850b1a9de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16b8c98bfe225e542d41b20850b1a9de">FollowCamera</a> ()</td></tr>
+<tr class="memdesc:a16b8c98bfe225e542d41b20850b1a9de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que maneja el movimiento de la camara.  <br /></td></tr>
 <tr class="separator:a16b8c98bfe225e542d41b20850b1a9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:af24a918eab8fae638747332e343bc842" id="r_af24a918eab8fae638747332e343bc842"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af24a918eab8fae638747332e343bc842">minValues</a></td></tr>
-<tr class="separator:af24a918eab8fae638747332e343bc842"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac849c07c2c876f055d70d50b6bb99069" id="r_ac849c07c2c876f055d70d50b6bb99069"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac849c07c2c876f055d70d50b6bb99069">maxValues</a></td></tr>
-<tr class="separator:ac849c07c2c876f055d70d50b6bb99069"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8803f4b739a04c1e740b280692e9337" id="r_ae8803f4b739a04c1e740b280692e9337"><td class="memItemLeft" align="right" valign="top">Camera&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8803f4b739a04c1e740b280692e9337">Camera</a></td></tr>
+<tr class="memdesc:ae8803f4b739a04c1e740b280692e9337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camara que sera manipulada.  <br /></td></tr>
 <tr class="separator:ae8803f4b739a04c1e740b280692e9337"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d950f859d373de2504ec3c53bf39887" id="r_a9d950f859d373de2504ec3c53bf39887"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d950f859d373de2504ec3c53bf39887">target</a></td></tr>
+<tr class="memdesc:a9d950f859d373de2504ec3c53bf39887"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objeto que seguira la camara.  <br /></td></tr>
 <tr class="separator:a9d950f859d373de2504ec3c53bf39887"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d6c405c84756c6cf3c16564cebb3f79" id="r_a1d6c405c84756c6cf3c16564cebb3f79"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d6c405c84756c6cf3c16564cebb3f79">offset</a></td></tr>
+<tr class="memdesc:a1d6c405c84756c6cf3c16564cebb3f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tamaño de margen.  <br /></td></tr>
 <tr class="separator:a1d6c405c84756c6cf3c16564cebb3f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c4e362a52e824a3ed608e0ea731dc93" id="r_a8c4e362a52e824a3ed608e0ea731dc93"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c4e362a52e824a3ed608e0ea731dc93">smoothFactor</a></td></tr>
+<tr class="memdesc:a8c4e362a52e824a3ed608e0ea731dc93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escala de suavidad de movimiento de la camara.  <br /></td></tr>
 <tr class="separator:a8c4e362a52e824a3ed608e0ea731dc93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:af24a918eab8fae638747332e343bc842" id="r_af24a918eab8fae638747332e343bc842"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af24a918eab8fae638747332e343bc842">minValues</a><code> [get]</code></td></tr>
+<tr class="memdesc:af24a918eab8fae638747332e343bc842"><td class="mdescLeft">&#160;</td><td class="mdescRight">@hidden  <br /></td></tr>
+<tr class="separator:af24a918eab8fae638747332e343bc842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac849c07c2c876f055d70d50b6bb99069" id="r_ac849c07c2c876f055d70d50b6bb99069"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac849c07c2c876f055d70d50b6bb99069">maxValues</a><code> [get]</code></td></tr>
+<tr class="memdesc:ac849c07c2c876f055d70d50b6bb99069"><td class="mdescLeft">&#160;</td><td class="mdescRight">@hidden  <br /></td></tr>
+<tr class="separator:ac849c07c2c876f055d70d50b6bb99069"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>Maneja el control de la camara, hace que no se mueva de manera rigida. </p>
+
 <p class="definition">Definition at line <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html#l00006">6</a> of file <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html">GameCameraBehavior.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a16b8c98bfe225e542d41b20850b1a9de" name="a16b8c98bfe225e542d41b20850b1a9de"></a>
@@ -150,7 +165,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html#l00035">35</a> of file <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html">GameCameraBehavior.cs</a>.</p>
+<p>Metodo que maneja el movimiento de la camara. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html#l00051">51</a> of file <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html">GameCameraBehavior.cs</a>.</p>
 
 </div>
 </div>
@@ -167,39 +184,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html#l00011">11</a> of file <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html">GameCameraBehavior.cs</a>.</p>
+<p>Camara que sera manipulada. </p>
 
-</div>
-</div>
-<a id="ac849c07c2c876f055d70d50b6bb99069" name="ac849c07c2c876f055d70d50b6bb99069"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac849c07c2c876f055d70d50b6bb99069">&#9670;&#160;</a></span>maxValues</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vector3 GameCameraBehavior.maxValues</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html#l00010">10</a> of file <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html">GameCameraBehavior.cs</a>.</p>
-
-</div>
-</div>
-<a id="af24a918eab8fae638747332e343bc842" name="af24a918eab8fae638747332e343bc842"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af24a918eab8fae638747332e343bc842">&#9670;&#160;</a></span>minValues</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vector3 GameCameraBehavior.minValues</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html#l00009">9</a> of file <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html">GameCameraBehavior.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html#l00022">22</a> of file <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html">GameCameraBehavior.cs</a>.</p>
 
 </div>
 </div>
@@ -215,7 +202,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html#l00013">13</a> of file <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html">GameCameraBehavior.cs</a>.</p>
+<p>Tamaño de margen. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html#l00026">26</a> of file <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html">GameCameraBehavior.cs</a>.</p>
 
 </div>
 </div>
@@ -231,7 +220,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html#l00014">14</a> of file <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html">GameCameraBehavior.cs</a>.</p>
+<p>Escala de suavidad de movimiento de la camara. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html">GameCameraBehavior.cs</a>.</p>
 
 </div>
 </div>
@@ -247,7 +238,62 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html#l00012">12</a> of file <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html">GameCameraBehavior.cs</a>.</p>
+<p>Objeto que seguira la camara. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html#l00024">24</a> of file <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html">GameCameraBehavior.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="ac849c07c2c876f055d70d50b6bb99069" name="ac849c07c2c876f055d70d50b6bb99069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac849c07c2c876f055d70d50b6bb99069">&#9670;&#160;</a></span>maxValues</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 GameCameraBehavior.maxValues</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>@hidden </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html">GameCameraBehavior.cs</a>.</p>
+
+</div>
+</div>
+<a id="af24a918eab8fae638747332e343bc842" name="af24a918eab8fae638747332e343bc842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af24a918eab8fae638747332e343bc842">&#9670;&#160;</a></span>minValues</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 GameCameraBehavior.minValues</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>@hidden </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html#l00013">13</a> of file <a class="el" href="../../d0/d67/_game_camera_behavior_8cs_source.html">GameCameraBehavior.cs</a>.</p>
 
 </div>
 </div>

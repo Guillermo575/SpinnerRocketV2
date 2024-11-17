@@ -8,20 +8,29 @@ namespace GameElement
 {
     public class Obstacle : MonoBehaviour
     {
-        #region Variables
+        #region Variables privada
         /** @hidden */  private new Transform transform;
         /** @hidden */  private new Rigidbody rigidbody;
         /** @hidden */  private GameManager gameManager;
         /** Objetivo del obstaculo, el obstaculo perseguira o intentara moverse hacia la direccion donde se encuentra */ 
         private GameObject objTarget;
+        /** Variable que indica si ya tiene fijado al objetivo */
         private bool targetLock = false;
+        /** Indica la direccion de velocidad del objeto */
         private Vector3 direction = Vector3.zero;
+        #endregion
+
+        #region Variables Editor
+        /** Velocidad de movimiento del objeto*/
         public float SpeedMovement = 3;
+        /** Indica como se comportara el objeto, si es verdadero semovera siempre hacia el objetivo, si es falso se movera de forma constante a una direccion*/
         public bool IsStalker = false;
+        /** Rango de deteccion para que el objeto persiga al objetivo en caso de que la variable IsStalker sea verdadera */
         public float StalkRange = 12;
         #endregion
 
         #region General
+        /** Inicializacion de los objetos */
         void Start()
         {
             transform = GetComponent<Transform>();
@@ -30,6 +39,7 @@ namespace GameElement
             var objmain = GameObject.FindObjectsByType<Player>(FindObjectsSortMode.InstanceID);
             objTarget = objmain.Length == 0 ? null : objmain[0].gameObject;
         }
+        /** Metodo que actualiza la direccion a la que se movera el objeto*/
         void Update()
         {
             if (gameManager.IsGameActive)
@@ -78,6 +88,7 @@ namespace GameElement
         #endregion
 
         #region setDirection
+        /** Metodo que ajusta la velocidad del objeto */
         public void setSpeed(float Speed)
         {
             direction = objTarget.transform.position - transform.position;
@@ -85,6 +96,7 @@ namespace GameElement
             direction.Normalize();
             transform.position += direction * Speed * Time.deltaTime;
         }
+        /** Metodo que actualiza la direccion a la que se movera el objeto */
         public void RotateTowards(Vector2 target)
         {
             var targetPosition = target == null ? new Vector2(0f, 0f) : target;

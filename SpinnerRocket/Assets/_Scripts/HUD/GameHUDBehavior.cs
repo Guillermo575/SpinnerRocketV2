@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -36,32 +37,42 @@ public class GameHUDBehavior : MonoBehaviour
     #endregion
 
     #region Variables
-    private GameManager objGameManager;
-    private GameTimeWatch objGameTimeWatch;
-    private AudioManager audioManager;
-    private MenuManager menuManager;
+    /** @hidden*/ private GameManager objGameManager;
+    /** @hidden*/ private GameTimeWatch objGameTimeWatch;
+    /** @hidden*/ private AudioManager audioManager;
+    /** @hidden*/ private MenuManager menuManager;
+    /** Objeto que guarda el HUD */
     public GameObject HUD;
-    public Image btnSoundON;
-    public Image btnSoundOFF;
+    /** @hidden*/ public Image btnSoundON;
+    /** @hidden*/ public Image btnSoundOFF;
+    /** Enum que indica cual es el tipo de puntuacion que tendra el nivel (por puntos o por tiempo) */
     public enum ScoreType
     {
         None = 0,
         Points = 1,
         Timer = 2,
     }
+    /** Tipo de puntuacion que tiene el nivel */
     public ScoreType scoretype = ScoreType.None;
+    /** objeto de texto de puntuacion */
     public TextMeshProUGUI txtScore;
+    /** objeto de texto de puntuacion mas alta*/
     public TextMeshProUGUI txtHighScore;
+    /** objeto de texto del nombre del nivel */
     public TextMeshProUGUI txtTitle;
+    /** objeto de texto de las estrellas actuales del nivel */
     public TextMeshProUGUI txtStarCurrent;
+    /** objeto de texto que se muestra al inicio del nivel indicando el tiempo de inicio del nivel*/
     public TextMeshProUGUI txtLaunch;
     #endregion
 
     #region Start & Update
+    /** Metodo para crear el singleton */
     void Awake()
     {
         CreateSingleton();
     }
+    /** Metodo de inicio de los objetos */
     void Start()
     {
         objGameManager = GameManager.GetSingleton();
@@ -88,6 +99,7 @@ public class GameHUDBehavior : MonoBehaviour
             }
         };
     }
+    /** Metodo de actualizacion del objeto */
     void Update()
     {
         setScore();
@@ -114,6 +126,7 @@ public class GameHUDBehavior : MonoBehaviour
     #endregion
 
     #region General
+    /** Actualiza las puntuaciones del HUD */
     public void setScore()
     {
         switch(scoretype)
@@ -148,6 +161,7 @@ public class GameHUDBehavior : MonoBehaviour
             break;
         }
     }
+    /** Actualiza el nombre del nivel */
     public void setTitle()
     {
         if(txtTitle != null)
@@ -155,6 +169,7 @@ public class GameHUDBehavior : MonoBehaviour
             txtTitle.text = objGameManager.LevelName;
         }
     }
+    /** Actualiza las estrellas del nivel, cuando el jugador obtenga todas las letras se tornaran en amarillo */
     public void setStarCurrent()
     {
         if (txtStarCurrent != null)
@@ -169,6 +184,10 @@ public class GameHUDBehavior : MonoBehaviour
             //txtStarCurrent.text = CurrentStars.Count == TotalStars.Count ? "*" + txtStarCurrent.text + "*" : txtStarCurrent.text;
         }
     }
+    /** Actualiza el record actual 
+     @param name nombre del nivel
+     @return valor bool que indica si el record fue roto
+     */
     public bool SetTimerRecord(string name)
     {
         var record = menuManager.highScore.GetScore(name);
@@ -179,6 +198,10 @@ public class GameHUDBehavior : MonoBehaviour
         }
         return false;
     }
+    /** Obtiene el record actual 
+    @param name nombre del nivel
+    @return string que devuelve el record en formato 0:00
+    */
     public string GetRecord(string name)
     {
         var record = menuManager.highScore.GetScore(name);

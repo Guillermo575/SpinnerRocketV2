@@ -32,21 +32,28 @@ public class GameTimeWatch : MonoBehaviour
     #endregion
 
     #region Variables
+    /** @hidden*/
     private float _currentTime = 0.0f;
+    /** Indica si el reloj ha iniciado */
     private bool Started = false;
+    /** @hidden*/
     private MenuManager menuManager;
+    /** Obtiene el tiempo actual del reloj */
     public float currentTime { get { return _currentTime; } }
     #endregion
 
     #region Start & Update
+    /** Crea el singleton de la clase*/
     void Awake()
     {
         CreateSingleton();
     }
+    /** Inicializacion de los objetos */
     public void Start()
     {
         menuManager = MenuManager.GetSingleton();
     }
+    /** Agrega el tiempo transcurrido al reloj */
     public void Update()
     {
         if (Started)
@@ -57,11 +64,13 @@ public class GameTimeWatch : MonoBehaviour
     #endregion
 
     #region Start & Stop timer
+    /** Inicia el reloj */
     public void StartTimer()
     {
         _currentTime = 0.0f;
         Started = true;
     }
+    /** Detiene el reloj*/
     public void StopTimer()
     {
         Started = false;
@@ -69,6 +78,7 @@ public class GameTimeWatch : MonoBehaviour
     #endregion
 
     #region Get & Set
+    /** Devuelve el tiempo transcurrido del reloj en formato 0:00 como string */
     public string GetCurrentTimer()
     {
         var record = _currentTime;
