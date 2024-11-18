@@ -2,8 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 /**
  * @file
@@ -12,41 +14,37 @@ using UnityEngine.SceneManagement;
 public class MenuPausa : _Menu
 {
     #region Variables
-    private GameManager gameManager;
+    /** @hidden*/ private GameManager gameManager;
+    #endregion
+
+    #region Controles
+    /** Objeto del input manager */
+    private InputManager inputManager;
+    /** InputAction que gestionara la pausa */
+    private InputAction inputPause;
     #endregion
 
     #region Awake & Update
+    /** Inicializacion de los objetos*/
     protected override void Start()
     {
         base.Start();
         gameManager = GameManager.GetSingleton();
+        inputManager = InputManager.GetSingleton();
         gameManager.OnGamePause += delegate { MostrarMenuPausa(); } ;
         gameManager.OnGameResume += delegate { OcultarMenuPausa(); };
-    }
-    private void Update()
-    {
-        if (!gameManager.IsGameEnd)
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                if (gameManager.IsGamePause)
-                {
-                    gameManager.ResumeGame();
-                }
-                else
-                {
-                    gameManager.PauseGame();
-                }
-            }
-        }
+        inputPause = inputManager.GetAction("Pause");
+        inputPause.performed += PauseAction;
     }
     #endregion
 
     #region Mostrar/Ocultar menu
+    /** Muestra el menu de pausa */
     private void MostrarMenuPausa()
     {
         menuManager.ShowMenu(menuManager.GetMenu("CanvasMenuPausa"));
     }
+    /** Oculta el menu de pausa */
     private void OcultarMenuPausa()
     {
         menuManager.DeleteMenuTree();
@@ -54,30 +52,37 @@ public class MenuPausa : _Menu
     #endregion
 
     #region Botones Interfaz
+    /** Muestra la pantalla de confirmacion para regresar a la pantalla principal*/
     public void RegresarAPantallaPrincipal()
     {
         MostrarPantallaConfirmar(EventoRegresarAPantallaPrincipal, "Do you want to return to the main menu?");
     }
+    /** Evento que regresa a la pantalla principal */
     private void EventoRegresarAPantallaPrincipal()
     {
         SceneManager.LoadScene(0);
     }
+    /** Muestra la pantalla de confirmacion para reiniciar de nivel */
     public void ReintentarNivel()
     {
         MostrarPantallaConfirmar(EventoReintentarNivel, "Do you want to restart the level?");
     }
+    /** Evento que de reinicio de nivel */
     public void EventoReintentarNivel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+    /** Muestra la pantalla de opciones */
     public void MostrarMenuOpciones()
     {
         menuManager.ShowMenu(menuManager.GetMenu("CanvasMenuOpciones"));
     }
+    /** Reanuda el juego */
     public void ResumeGame()
     {
         gameManager.ResumeGame();
     }
+    /** Regresa al menu anterior */
     public void BackMenu()
     {
         menuManager.BackMenu();
@@ -85,6 +90,7 @@ public class MenuPausa : _Menu
     #endregion
 
     #region Panel Confirmar
+    /** Metodo para mostrar la pantalla para confirmar */
     private void MostrarPantallaConfirmar(UnityAction evt, String msg)
     {
         var menuConfirmar = menuManager.menuConfirmar;
@@ -97,6 +103,24 @@ public class MenuPausa : _Menu
         else
         {
             evt();
+        }
+    }
+    #endregion
+
+    #region InputAction
+    /** Metodo de inputaction cuando oprimes el boton de pausa */
+    private void PauseAction(InputAction.CallbackContext obj)
+    {
+        if (!gameManager.IsGameEnd)
+        {
+            if (gameManager.IsGamePause)
+            {
+                gameManager.ResumeGame();
+            }
+            else
+            {
+                gameManager.PauseGame();
+            }
         }
     }
     #endregion

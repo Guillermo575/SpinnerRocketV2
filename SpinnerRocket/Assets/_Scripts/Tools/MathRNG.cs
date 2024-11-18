@@ -9,13 +9,23 @@ using UnityEngine;
 public class MathRNG
 {
     #region Variables
+    /** Semilla usada */
     public int Seed { get; set; }
+    /** Valor minimo del rango */
     private decimal MinValue { get; set; }
+    /** Valor maximo del rango */
     private decimal MaxValue { get; set; }
+    /** Contador que inicia del 0 y aumenta con cada solicitud de numero aleatorio */
     private int Next { get; set; }
     #endregion
 
     #region Constructors
+    /**
+     * Inicializa la clase
+     * @param MinValue: Valor minimo
+     * @param MaxValue: Valor maximo
+     * @param Seed: semilla utilizada
+     */
     public MathRNG(decimal MinValue, decimal MaxValue, int Seed = 1)
     {
         this.MinValue = MinValue;
@@ -23,6 +33,10 @@ public class MathRNG
         this.Seed = Seed;
         Next = 1;
     }
+    /**
+     * Inicializa la clase
+     * @param Seed: semilla utilizada
+     */
     public MathRNG(int Seed = 1)
     {
         this.Seed = Seed;
@@ -31,32 +45,67 @@ public class MathRNG
     #endregion
 
     #region NextValues
+    /**
+     * Solicita un numero aleatorio del 0 al 1
+     * @return numero decimal del 0 al 1
+     */
     public decimal GetRandom()
     {
         return GetCatalystSeed();
     }
+    /**
+     * Solicita un numero aleatorio entre los rangos solicitados
+     * @param MinValue: Valor minimo
+     * @param MaxValue: Valor maximo
+     * @return numero entero
+     */
     public int GetRandom(int MinValue, int MaxValue)
     {
         return (int)Math.Round(NextValue((decimal)MinValue, (decimal)MaxValue));
     }
+    /**
+     * Solicita un numero aleatorio entre los rangos solicitados
+     * @param MaxValue: Valor maximo
+     * @return numero entero
+     */
     public int GetRandom(int MaxValue)
     {
         return (int)Math.Round(NextValue(0, (decimal)MaxValue));
     }
+    /**
+     * Solicita un numero aleatorio entre los rangos solicitados
+     * @param MinValue: Valor minimo
+     * @param MaxValue: Valor maximo
+     * @return numero flotante
+     */
     public float GetRandom(float MinValue, float MaxValue)
     {
         return (float)NextValue((decimal)MinValue, (decimal)MaxValue);
     }
+    /**
+     * Solicita un numero aleatorio entre los rangos instanciados
+     * @return numero decimal
+     */
     public decimal NextValue()
     {
         return NextValue(MinValue, MaxValue);
     }
+    /**
+     * Solicita un numero aleatorio entre los rangos solicitados
+     * @param MinValue: Valor minimo
+     * @param MaxValue: Valor maximo
+     * @return numero decimal
+     */
     public decimal NextValue(decimal MinValue, decimal MaxValue)
     {
         decimal initialValue = GetCatalystSeed();
         decimal PseudoRandom = (initialValue * (MaxValue - MinValue)) + MinValue;
         return PseudoRandom;
     }
+    /**
+     * Formula que genera los numeros pseudoaleatorios
+     * @return numero decimal entre 0 y 1
+     */
     public decimal GetCatalystSeed()
     {
         decimal SeedModify = Seed;
@@ -72,26 +121,58 @@ public class MathRNG
     #endregion
 
     #region NextValues (Other Numeric Values)
+    /**
+     * Solicita un numero aleatorio entre los rangos instanciados
+     * @return numero flotante
+     */
     public float NextValueFloat()
     {
         return (float)NextValue(MinValue, MaxValue);
     }
+    /**
+     * Solicita un numero aleatorio entre los rangos solicitados
+     * @param MinValue: Valor minimo
+     * @param MaxValue: Valor maximo
+     * @return numero flotante
+     */
     public float NextValueFloat(float MinValue, float MaxValue)
     {
         return (float)NextValue((decimal)MinValue, (decimal)MaxValue);
     }
+    /**
+     * Solicita un numero aleatorio entre los rangos instanciados
+     * @param MinValue: Valor minimo
+     * @param MaxValue: Valor maximo
+     * @return numero double
+     */
     public double NextValueDouble()
     {
         return (double)NextValue(MinValue, MaxValue);
     }
+    /**
+     * Solicita un numero aleatorio entre los rangos solicitados
+     * @param MinValue: Valor minimo
+     * @param MaxValue: Valor maximo
+     * @return numero flotante
+     */
     public float NextValueDouble(double MinValue, double MaxValue)
     {
         return (float)NextValue((decimal)MinValue, (decimal)MaxValue);
     }
+    /**
+     * Solicita un numero aleatorio entre los rangos instanciados
+     * @return numero entero
+     */
     public Int32 NextValueInt()
     {
         return (Int32)Decimal.Round(NextValue(MinValue, MaxValue));
     }
+    /**
+     * Solicita un numero aleatorio entre los rangos solicitados
+     * @param MinValue: Valor minimo
+     * @param MaxValue: Valor maximo
+     * @return numero entero
+     */
     public Int32 NextValueInt(double MinValue, double MaxValue)
     {
         return (Int32)Decimal.Round(NextValue((decimal)MinValue, (decimal)MaxValue));

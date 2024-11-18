@@ -7,20 +7,33 @@ using UnityEngine;
  */
 public class InputWindow : MonoBehaviour
 {
+    #region Variables
+    /** Objeto que representa la ventana de teclado */
     public GameObject WindowKeyBoard;
+    /** Objeto que representa la ventana de gamepad */
     public GameObject WindowGamePad;
+    #endregion
+
+    #region Start & Update
+    /** Inicializacion de los objetos */
     void Start()
     {
         EnableControllers();
     }
+    /** Metodo de actualizacion de objetos */
     void Update()
     {
         EnableControllers();
     }
+    #endregion
+
+    #region General
+    /** Inactiva o desactiva las ventanas de acuerdo a los controles conectados */
     private void EnableControllers()
     {
         var controllers = Input.GetJoystickNames();
         WindowKeyBoard.SetActive(controllers.Length == 0);
         WindowGamePad.SetActive(controllers.Length > 0);
     }
+    #endregion
 }

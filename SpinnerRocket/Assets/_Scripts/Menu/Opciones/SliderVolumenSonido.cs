@@ -10,19 +10,18 @@ using UnityEngine.UI;
 public class SliderVolumenSonido : MonoBehaviour
 {
     #region Variables
-    private MenuManager menuManager;
-    private Opciones opciones;
+    /** @hidden*/ private MenuManager menuManager;
+    /** @hidden*/ private Opciones opciones;
+    /** Objeto slider que usara la clase */
     Slider slider;
     #endregion
 
     #region Awake & Start
-    void Awake()
+    /** Metodo de inicio para crear el singleton */
+    public void Start()
     {
         menuManager = MenuManager.GetSingleton();
         opciones = menuManager.opciones;
-    }
-    public void Start()
-    {
         slider = this.GetComponent<Slider>();
         slider.value = (int)opciones.VolumenSonido;
         slider.onValueChanged.AddListener(delegate { ControlarCambios(); });
@@ -30,6 +29,7 @@ public class SliderVolumenSonido : MonoBehaviour
     #endregion
 
     #region General
+    /** Metodo de que responde al cambio de sonido */
     public void ControlarCambios()
     {
         opciones.CambiarVolumenSonido(slider.value);

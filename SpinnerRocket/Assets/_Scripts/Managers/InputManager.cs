@@ -13,10 +13,13 @@ using static InputManager.ActionMap.Action;
 public class InputManager : MonoBehaviour
 {
     #region Singleton
+    /** @hidden */
     private static InputManager SingletonGameManager;
+    /** @hidden */
     private InputManager()
     {
     }
+    /** @hidden */
     private void CreateSingleton()
     {
         if (SingletonGameManager == null)
@@ -28,6 +31,7 @@ public class InputManager : MonoBehaviour
             Debug.LogError("Ya existe una instancia de esta clase");
         }
     }
+    /** Solo se puede crear un objeto de la clase InputManager, este metodo obtiene el objeto creado */
     public static InputManager GetSingleton()
     {
         return SingletonGameManager;
@@ -35,29 +39,37 @@ public class InputManager : MonoBehaviour
     #endregion
 
     #region Variables
+    /** Input Principal */
     public InputActionAsset MainInput;
+    /** Lista de InputActionAsset disponibles */
     public List<InputActionAsset> lstInputs;
+    /** @hidden*/
     private List<ActionMap> lstActionMaps;
     #endregion
 
     #region Awake & Start & Update
+    /** Inicializacion de los objetos */
     void Awake()
     {
         CreateSingleton();
         MainInput = MainInput == null ? lstInputs.First() : MainInput;
         ParseActionMaps();
     }
+    /** @hidden*/
     void Start()
     {
     }
+    /** @hidden*/
     void Update()
     {
     }
+    /** Inicializacion de los objetos */
     private void OnEnable()
     {
         MainInput.Enable();
         TouchSimulation.Enable();
     }
+    /** Inicializacion de los objetos */
     private void OnDisable()
     {
         MainInput.Disable();
@@ -66,6 +78,7 @@ public class InputManager : MonoBehaviour
     #endregion
 
     #region General
+    /** Parsea la lista de acciones en un listado */
     public void ParseActionMaps()
     {
         lstActionMaps = new List<ActionMap>();
@@ -120,10 +133,23 @@ public class InputManager : MonoBehaviour
             }
         }
     }
+    /**
+     * Obtiene la accion pedida
+     * @param actionName: Nombre de la accion
+     * @return InputAction
+     */
     public InputAction GetAction(string actionName)
     {
         return MainInput.FindAction(actionName);
     }
+    /**
+     * Obtiene la lista de teclas de cada accion
+     * @param actionroot: Nombre del mapa de acciones
+     * @param actionName: Nombre de la accion
+     * @param OutputDevice: Nombre del dispositivo de entrada (Keyboard, gamepad, etc)
+     * @param compositeName: Nombre del decorador adicional de la accion
+     * @return List<ActionInput>
+     */
     public List<ActionInput> GetActionKeys(string actionroot, string actionName, string OutputDevice = "", string compositeName = "")
     {
         var objActionMaps = (from x in lstActionMaps where x.name == actionroot select x).First();
@@ -135,6 +161,7 @@ public class InputManager : MonoBehaviour
     #endregion
 
     #region ActionMap
+    /** Clase que parsea los objetos de un inputaction con tal de que se pueda obtener un arbol de clases */
     public class ActionMap
     {
         public string name;
@@ -143,6 +170,7 @@ public class InputManager : MonoBehaviour
         {
             lstActions = new List<Action>();
         }
+        /** @hidden*/
         public class Action
         {
             public string name;
@@ -153,6 +181,7 @@ public class InputManager : MonoBehaviour
                 lstInputAction = new List<ActionInput>();
                 lstInputComposite = new List<ActionInput>();
             }
+            /** @hidden*/
             public class ActionInput
             {
                 public string name;

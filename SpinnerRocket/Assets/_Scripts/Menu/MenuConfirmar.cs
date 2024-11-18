@@ -11,11 +11,14 @@ using UnityEngine.Events;
 public class MenuConfirmar : _Menu
 {
     #region Variables
+    /** Mensaje que aparece en la ventana cambia el de default */
     public TMP_Text txtTitulo;
+    /** Evento que reproduce la ventana en caso de confirmar que si */
     UnityEvent EventoConfirmar;
     #endregion
 
     #region Awake
+    /** Inicializacion de los objetos */
     protected override void Start()
     {
         base.Start();
@@ -38,10 +41,12 @@ public class MenuConfirmar : _Menu
             txtTitulo.text = titulo;
         }
     }
+    /** Evento que se activa en caso de seleccionar No, que seria regresar al menu anterior */
     public void ConfirmarNo()
     {
         menuManager.BackMenu();
     }
+    /** Evento que se activa en caso de seleccionar Si, que seria regresar al menu anterior y activar el evento de confirmar */
     public void ConfirmarSi()
     {
         EventoConfirmar.Invoke();

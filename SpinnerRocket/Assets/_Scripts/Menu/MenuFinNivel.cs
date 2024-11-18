@@ -11,10 +11,11 @@ using UnityEngine.SceneManagement;
 public class MenuFinNivel : _Menu
 {
     #region Variables
-    private GameManager gameManager;
+    /** @hidden*/ private GameManager gameManager;
     #endregion
 
     #region Awake
+    /** Inicializacion de los objetos, es una clase override */
     protected override void Start()
     {
         base.Start();
@@ -31,6 +32,7 @@ public class MenuFinNivel : _Menu
     #endregion
 
     #region Eventos
+    /** Te manda al siguiente nivel de acuerdo al index actual, en caso de llegar a su final te manda a la pantalla de titulo */
     public void SiguienteNivel()
     {
         var siguienteNivel = SceneManager.GetActiveScene().buildIndex + 1;
@@ -43,14 +45,17 @@ public class MenuFinNivel : _Menu
             SceneManager.LoadScene(0);
         }
     }
+    /** Carga el nivel actual */
     public void ReintentarNivel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+    /** Carga la pantalla de inicio */
     public void RegresarAPantallaPrincipal()
     {
         MostrarPantallaConfirmar(EventoRegresarAPantallaPrincipal, "Do you want to return to the main menu?");
     }
+    /** Evento que se manda a llamar desde el metodo RegresarAPantallaPrincipal */
     private void EventoRegresarAPantallaPrincipal()
     {
         SceneManager.LoadScene(0);
@@ -58,6 +63,7 @@ public class MenuFinNivel : _Menu
     #endregion
 
     #region Panel Confirmar
+    /** Muestra la ventana de confirmacion*/
     private void MostrarPantallaConfirmar(UnityAction evt, String msg)
     {
         var menuConfirmar = menuManager.menuConfirmar;

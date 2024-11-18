@@ -8,9 +8,12 @@ using UnityEngine;
  */
 public class InputWindowKeyBoard : MonoBehaviour
 {
-    private InputManager inputManager;
+    /** @hidden*/ private InputManager inputManager;
+    /** Texto que muestra el boton para la accion de propulsion */
     public TMP_Text txtLaunch;
+    /** Texto que muestra el boton para la accion de cambio de rotacion */
     public TMP_Text txtRotate;
+    /** Inicializacion de los objetos */
     void Start()
     {
         inputManager = InputManager.GetSingleton();

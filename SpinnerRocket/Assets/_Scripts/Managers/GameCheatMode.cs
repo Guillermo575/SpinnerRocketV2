@@ -7,17 +7,19 @@ using UnityEngine;
 public class GameCheatMode : MonoBehaviour
 {
     #region Variables
-    GameManager GameManager;
-    AudioManager audioManager;
-    bool KeyPress = false;
+    /** @hidden*/ GameManager GameManager;
+    /** @hidden*/ AudioManager audioManager;
+    /** @hidden*/ bool KeyPress = false;
     #endregion
 
     #region Start & Update
+    /** Inicializacion de los objetos */
     void Start()
     {
         GameManager = GameManager.GetSingleton();
         audioManager = AudioManager.GetSingleton();
     }
+    /** Revisa cual teclado esta siendo oprimido */
     void Update()
     {
         if(!KeyPress)
@@ -35,11 +37,13 @@ public class GameCheatMode : MonoBehaviour
     #endregion
 
     #region Metodos
+    /** Te vuelves invencible al oprimir la tecla 1 */
     public void SwitchInvincibleMode()
     {
         GameManager.setInvencibleMode(!GameManager.IsInvencibleMode);
         Debug.Log($"SwitchInvincibleMode = {GameManager.IsInvencibleMode}" );
     }
+    /** Tomas las estrellas al oprimir la tecla 2 */
     public void ClearStars()
     {
         Debug.Log("ClearStars");
@@ -51,6 +55,7 @@ public class GameCheatMode : MonoBehaviour
             GameManager.AddScore(1);
         }
     }
+    /** Te transportas a la puerta al oprimir la tecla 3 */
     public void TelePortDoor()
     {
         Debug.Log("TeleportDoor");
@@ -63,6 +68,7 @@ public class GameCheatMode : MonoBehaviour
             objMainPlayer.position = objDoorLevel.position;
         }
     }
+    /** Silencia o reactiva el audio */
     public void MuteGame()
     {
         audioManager.ToogleMute();

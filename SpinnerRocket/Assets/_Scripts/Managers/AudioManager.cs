@@ -57,12 +57,12 @@ public class AudioManager : MonoBehaviour
     #endregion
 
     #region Awake & Start
-    /** @hidden */
+    /** Inicializacion de los objetos */
     void Awake()
     {
         CreateSingleton();
     }
-    /** @hidden */
+    /** Inicializacion de los objetos */
     private void Start()
     {
         audioSource = this.GetComponentInParent<AudioSource>();
@@ -130,6 +130,7 @@ public class AudioManager : MonoBehaviour
             UnityEngine.Debug.LogException(e);
         }
     }
+    /** Detiene el sonido */
     public void StopSound()
     {
         audioSource.Stop();
@@ -137,6 +138,7 @@ public class AudioManager : MonoBehaviour
     #endregion
 
     #region General
+    /** Quita o reactiva el sonido */
     public void ToogleMute()
     {
         if (!IsMute)

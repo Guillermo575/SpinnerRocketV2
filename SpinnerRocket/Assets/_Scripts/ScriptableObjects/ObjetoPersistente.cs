@@ -9,6 +9,9 @@ using UnityEngine;
  */
 public abstract class ObjetoPersistente : ScriptableObject
 {
+    /** Guarda el objeto persistente en un archivo en formato JSON 
+      * @param NameFile: Nombre del archivo
+      */
     public void Guardar(string NameFile = null)
     {
         var bf = new BinaryFormatter();
@@ -17,6 +20,9 @@ public abstract class ObjetoPersistente : ScriptableObject
         bf.Serialize(file, json);
         file.Close();
     }
+    /** Carga el objeto persistente en un archivo en formato JSON 
+      * @param NameFile: Nombre del archivo
+      */
     public virtual void Cargar(string NameFile = null)
     {
         if (File.Exists(ObtenerRuta(NameFile)))
@@ -27,6 +33,9 @@ public abstract class ObjetoPersistente : ScriptableObject
             file.Close();
         }
     }
+    /** Guarda el objeto persistente en un archivo en formato JSON 
+      * @param NameFile: Nombre del archivo
+      */
     public string ObtenerRuta(string NameFile = null)
     {
         var nombreArchivoCompleto = string.IsNullOrEmpty(NameFile) ? name : NameFile;

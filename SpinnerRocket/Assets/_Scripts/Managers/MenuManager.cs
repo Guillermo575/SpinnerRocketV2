@@ -11,6 +11,7 @@ using UnityEngine.EventSystems;
 public class MenuManager : MonoBehaviour
 {
     #region Singleton
+    /** @hidden */
     private static MenuManager SingletonMenuManager;
     /** @hidden */
     private MenuManager()
@@ -41,28 +42,26 @@ public class MenuManager : MonoBehaviour
      * y regresar al anterior se elimina el mas reciente para desplegar el anterior
      */
     [HideInInspector] public List<GameObject> lstMenuTree;
+    /** Menus disponibles para buscar y activar */
     public List<GameObject> lstMenus;
-    public Opciones opciones;
-    public HighScore highScore;
+    /** @hidden*/ public Opciones opciones;
+    /** @hidden*/ public HighScore highScore;
+    /** Objeto de la clase MenuConfirmar */ 
     public MenuConfirmar menuConfirmar;
     #endregion
 
     #region Start
-    /** @hidden */
+    /** Crea el singleton */
     private void Awake()
     {
         CreateSingleton();
     }
-    /** @hidden */
+    /** Inicializacion de los objetos */
     void Start()
     {
         lstMenuTree = new List<GameObject>();
         var lstActivos = (from x in lstMenus where x.gameObject.activeSelf select x).ToList();
         if (lstActivos.Count > 0) lstMenuTree.Add(lstActivos.First().gameObject);
-    }
-    /** @hidden */
-    void Update()
-    {
     }
     #endregion
 
@@ -119,6 +118,11 @@ public class MenuManager : MonoBehaviour
     #endregion
 
     #region General
+    /**
+     * Obtiene el menu pedido
+     * @param name: Nombre del menu buscado
+     * @return GameObject que representa el menu
+     */
     public GameObject GetMenu(string name)
     {
         var lst = (from x in lstMenus where x.name.ToUpper() == name.ToUpper() select x).ToList();

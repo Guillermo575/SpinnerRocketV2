@@ -8,12 +8,23 @@ using UnityEngine.UI;
  */
 public class SceneLoadManager : MonoBehaviour
 {
-    public Image fadeImage; // Imagen que se usará para el desvanecimiento
-    public float fadeDuration = 0.8f; // Duración del desvanecimiento
+    #region Variables
+    /** Imagen que se usará para el desvanecimiento */
+    public Image fadeImage;
+    /** Duración del desvanecimiento */
+    public float fadeDuration = 0.8f;
+    #endregion
+
+    #region Start
+    /** Inicializacion de los objetos */
     void Start()
     {
         StartCoroutine(FadeOut());
     }
+    #endregion
+
+    #region General
+    /** Corutina que desvanece el objeto */
     private IEnumerator FadeOut()
     {
         float alpha = 1f;
@@ -25,4 +36,5 @@ public class SceneLoadManager : MonoBehaviour
         }
         fadeImage.gameObject.SetActive(false);
     }
+    #endregion
 }

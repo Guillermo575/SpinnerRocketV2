@@ -43,7 +43,9 @@ public class GameManager : MonoBehaviour
     /** @hidden*/ private GameState ActualGameState;
     /** @hidden*/ private float intervaloTiempoLaunch = 0.6f;
     /** @hidden*/ private GameTimeWatch objGameTimeWatch;
+    /** Objeto que crea numeros psudoaleatorios */
     public MathRNG mathRNG = new MathRNG(3241);
+    /** Objeto alterno que crea numeros psudoaleatorios para propositos adicionales */
     public MathRNG mathRNGOther = new MathRNG(3241);
     #endregion
 
@@ -159,7 +161,6 @@ public class GameManager : MonoBehaviour
     /** @hidden*/ public event GameEvent OnGameExit;
     /** @hidden*/ public event GameEvent OnGameLevelCleared;
 
-
     /** Inicia el juego*/
     public void PreparationGame()
     {
@@ -208,7 +209,7 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region Awake, Start & Update
-    /** @hidden*/
+    /** Inicializa la mayoria de los objetos y metodos principales */
     private void Awake()
     {
         if (objLimites != null)
@@ -226,7 +227,7 @@ public class GameManager : MonoBehaviour
         OnGameLevelCleared += delegate { OnGameEnd(); SiguienteNivel(); };
         OnGameExit += delegate { Time.timeScale = 1; };
     }
-    /** @hidden*/
+    /** Inicializacion de los objetos */
     private void Start()
     {
         audioManager = AudioManager.GetSingleton();
@@ -241,7 +242,7 @@ public class GameManager : MonoBehaviour
         //OnGameStart();
         PreparationGame();
     }
-    /** @hidden*/
+    /** Actualizacion de los objetos */
     private void Update()
     {
         if (IsGameEnd) return;
@@ -249,11 +250,12 @@ public class GameManager : MonoBehaviour
         {
         }
     }
-    /** @hidden*/
+    /** Crea el singleton */
     private void OnEnable()
     {
         CreateSingleton();
     }
+    /** Corutina que crea un intervalo de espera al inicio del nivel, muestra un texto que cuenta del 3 al 0 para dar inicio al juego */
     IEnumerator CoroutinePrepareLaunch()
     {
         for (int l = 3; l > 0 && !_GameStart; l--)
@@ -264,6 +266,7 @@ public class GameManager : MonoBehaviour
         _ConteLaunch = String.Empty;
         StartGame();
     }
+    /** Actualiza el siguiente nivel y guarda dicho escenario en caso de querer continuar donde te quedaste */
     public void SiguienteNivel()
     {
         var siguienteNivel = SceneManager.GetActiveScene().buildIndex + 1;

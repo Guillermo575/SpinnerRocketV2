@@ -6,10 +6,11 @@ using UnityEngine;
 public class _Menu : MonoBehaviour
 {
     #region Variables
-    internal MenuManager menuManager;
+    /** @hidden*/ internal MenuManager menuManager;
     #endregion
 
     #region Start
+    /** Inicializacion de los objetos */
     protected virtual void Start()
     {
         menuManager = MenuManager.GetSingleton();
