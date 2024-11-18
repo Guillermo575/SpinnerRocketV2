@@ -105,13 +105,16 @@ $(function(){initNavTree('de/d1c/class_menu_confirmar.html','../../'); initResiz
   <div class="headertitle"><div class="title">MenuConfirmar Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Menu que se abre para advertir al jugador si desea realizar alguna accion, en caso de que el jugador seleccione que si se ejecutara un evento generico.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for MenuConfirmar:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="../../de/d1c/class_menu_confirmar.png" usemap="#MenuConfirmar_map" alt=""/>
   <map id="MenuConfirmar_map" name="MenuConfirmar_map">
-<area href="../../d9/d3d/class___menu.html" alt="_Menu" shape="rect" coords="0,56,102,80"/>
+<area href="../../d9/d3d/class___menu.html" title="Clase padre que guarda las caracteristicas principales del menu." alt="_Menu" shape="rect" coords="0,56,102,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -121,23 +124,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a10c2a015cd6e4a98f4130672ce4ec653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abre la ventana y agrega el evento generico.  <br /></td></tr>
 <tr class="separator:a10c2a015cd6e4a98f4130672ce4ec653"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a741ca0303f9dbdf75878c3301e616dcd" id="r_a741ca0303f9dbdf75878c3301e616dcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a741ca0303f9dbdf75878c3301e616dcd">ConfirmarNo</a> ()</td></tr>
+<tr class="memdesc:a741ca0303f9dbdf75878c3301e616dcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evento que se activa en caso de seleccionar No, que seria regresar al menu anterior.  <br /></td></tr>
 <tr class="separator:a741ca0303f9dbdf75878c3301e616dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1aa80561ab7dbbe456e9ee7e1d277262" id="r_a1aa80561ab7dbbe456e9ee7e1d277262"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1aa80561ab7dbbe456e9ee7e1d277262">ConfirmarSi</a> ()</td></tr>
+<tr class="memdesc:a1aa80561ab7dbbe456e9ee7e1d277262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evento que se activa en caso de seleccionar Si, que seria regresar al menu anterior y activar el evento de confirmar.  <br /></td></tr>
 <tr class="separator:a1aa80561ab7dbbe456e9ee7e1d277262"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:adf854672f90b35a5c435899221933e3a" id="r_adf854672f90b35a5c435899221933e3a"><td class="memItemLeft" align="right" valign="top">TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf854672f90b35a5c435899221933e3a">txtTitulo</a></td></tr>
+<tr class="memdesc:adf854672f90b35a5c435899221933e3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mensaje que aparece en la ventana cambia el de default.  <br /></td></tr>
 <tr class="separator:adf854672f90b35a5c435899221933e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a6e52ab2f8d98ec45cd9f617f27119221" id="r_a6e52ab2f8d98ec45cd9f617f27119221"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e52ab2f8d98ec45cd9f617f27119221">Start</a> ()</td></tr>
+<tr class="memdesc:a6e52ab2f8d98ec45cd9f617f27119221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializacion de los objetos.  <br /></td></tr>
 <tr class="separator:a6e52ab2f8d98ec45cd9f617f27119221"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class___menu"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class___menu')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d9/d3d/class___menu.html">_Menu</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>Menu que se abre para advertir al jugador si desea realizar alguna accion, en caso de que el jugador seleccione que si se ejecutara un evento generico. </p>
+
 <p class="definition">Definition at line <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html#l00011">11</a> of file <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html">MenuConfirmar.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a741ca0303f9dbdf75878c3301e616dcd" name="a741ca0303f9dbdf75878c3301e616dcd"></a>
@@ -155,7 +163,9 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html#l00041">41</a> of file <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html">MenuConfirmar.cs</a>.</p>
+<p>Evento que se activa en caso de seleccionar No, que seria regresar al menu anterior. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html#l00045">45</a> of file <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html">MenuConfirmar.cs</a>.</p>
 
 </div>
 </div>
@@ -174,7 +184,9 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html#l00045">45</a> of file <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html">MenuConfirmar.cs</a>.</p>
+<p>Evento que se activa en caso de seleccionar Si, que seria regresar al menu anterior y activar el evento de confirmar. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html#l00050">50</a> of file <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html">MenuConfirmar.cs</a>.</p>
 
 </div>
 </div>
@@ -206,7 +218,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html#l00031">31</a> of file <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html">MenuConfirmar.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html#l00034">34</a> of file <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html">MenuConfirmar.cs</a>.</p>
 
 </div>
 </div>
@@ -233,9 +245,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Inicializacion de los objetos. </p>
+
 <p>Reimplemented from <a class="el" href="../../d9/d3d/class___menu.html#a1cb8dd4417a0c415768fa7efa534c80c">_Menu</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html">MenuConfirmar.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html#l00022">22</a> of file <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html">MenuConfirmar.cs</a>.</p>
 
 </div>
 </div>
@@ -252,7 +266,9 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html#l00014">14</a> of file <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html">MenuConfirmar.cs</a>.</p>
+<p>Mensaje que aparece en la ventana cambia el de default. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html#l00015">15</a> of file <a class="el" href="../../d5/dfa/_menu_confirmar_8cs_source.html">MenuConfirmar.cs</a>.</p>
 
 </div>
 </div>

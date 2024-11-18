@@ -108,6 +108,9 @@ $(function(){initNavTree('db/d10/class_game_manager.html','../../'); initResizab
   <div class="headertitle"><div class="title">GameManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Administrador principal del juegol, indica las fases en que se ordena el ciclo de juego.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for GameManager:</div>
 <div class="dyncontent">
@@ -159,19 +162,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aeaeea0d4a1a1e1e1c16b00d02c59dbb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completas el nivel.  <br /></td></tr>
 <tr class="separator:aeaeea0d4a1a1e1e1c16b00d02c59dbb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a278108184f54b68a4160abac0e7182f9" id="r_a278108184f54b68a4160abac0e7182f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a278108184f54b68a4160abac0e7182f9">SiguienteNivel</a> ()</td></tr>
+<tr class="memdesc:a278108184f54b68a4160abac0e7182f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza el siguiente nivel y guarda dicho escenario en caso de querer continuar donde te quedaste.  <br /></td></tr>
 <tr class="separator:a278108184f54b68a4160abac0e7182f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a804426a15491d1c85ea6803933314f2f" id="r_a804426a15491d1c85ea6803933314f2f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d10/class_game_manager.html">GameManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a804426a15491d1c85ea6803933314f2f">GetSingleton</a> ()</td></tr>
-<tr class="memdesc:a804426a15491d1c85ea6803933314f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solo se puede crear un objeto de la clase <a class="el" href="../../db/d10/class_game_manager.html">GameManager</a>, este metodo obtiene el objeto creado.  <br /></td></tr>
+<tr class="memdesc:a804426a15491d1c85ea6803933314f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solo se puede crear un objeto de la clase <a class="el" href="../../db/d10/class_game_manager.html" title="Administrador principal del juegol, indica las fases en que se ordena el ciclo de juego.">GameManager</a>, este metodo obtiene el objeto creado.  <br /></td></tr>
 <tr class="separator:a804426a15491d1c85ea6803933314f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:abfaf41c4455c72157c180803c6264db7" id="r_abfaf41c4455c72157c180803c6264db7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d9f/class_math_r_n_g.html">MathRNG</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfaf41c4455c72157c180803c6264db7">mathRNG</a> = new <a class="el" href="../../d4/d9f/class_math_r_n_g.html">MathRNG</a>(3241)</td></tr>
+<tr class="memdesc:abfaf41c4455c72157c180803c6264db7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objeto que crea numeros psudoaleatorios.  <br /></td></tr>
 <tr class="separator:abfaf41c4455c72157c180803c6264db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57507336b989b799db21ab0ee557e3fb" id="r_a57507336b989b799db21ab0ee557e3fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d9f/class_math_r_n_g.html">MathRNG</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57507336b989b799db21ab0ee557e3fb">mathRNGOther</a> = new <a class="el" href="../../d4/d9f/class_math_r_n_g.html">MathRNG</a>(3241)</td></tr>
+<tr class="memdesc:a57507336b989b799db21ab0ee557e3fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objeto alterno que crea numeros psudoaleatorios para propositos adicionales.  <br /></td></tr>
 <tr class="separator:a57507336b989b799db21ab0ee557e3fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c20b3afbb9ae2405f5e6d49a9a4200c" id="r_a7c20b3afbb9ae2405f5e6d49a9a4200c"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c20b3afbb9ae2405f5e6d49a9a4200c">ClipBGM</a></td></tr>
 <tr class="memdesc:a7c20b3afbb9ae2405f5e6d49a9a4200c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clip musical que se reproduce en el juego.  <br /></td></tr>
@@ -250,7 +256,8 @@ Events</h2></td></tr>
 <tr class="separator:afd4f4f234f8016c78b84ebcf92afe247"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>Administrador principal del juegol, indica las fases en que se ordena el ciclo de juego. </p>
+
 <p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00012">12</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a809dec58b5681fc1ebcc22eb428a914c" name="a809dec58b5681fc1ebcc22eb428a914c"></a>
@@ -272,7 +279,7 @@ Events</h2></td></tr>
 <tr><td class="fieldname"><a id="a809dec58b5681fc1ebcc22eb428a914ca0157fbb99be9622bdaa6e544270c0622" name="a809dec58b5681fc1ebcc22eb428a914ca0157fbb99be9622bdaa6e544270c0622"></a>Ended&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00129">129</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00131">131</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -294,7 +301,7 @@ Events</h2></td></tr>
 
 <p>Agrega puntos al nivel. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00108">108</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00110">110</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -315,7 +322,7 @@ Events</h2></td></tr>
 
 <p>Finaliza el nivel. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00192">192</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00193">193</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -355,7 +362,7 @@ Events</h2></td></tr>
 
 <p>Completas el nivel. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00203">203</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00204">204</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -376,7 +383,7 @@ Events</h2></td></tr>
 
 <p>Pierdes el nivel. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00198">198</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00199">199</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -397,7 +404,7 @@ Events</h2></td></tr>
 
 <p>Obtiene el estado dela ctual del juego. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00052">52</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00054">54</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -424,7 +431,7 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Solo se puede crear un objeto de la clase <a class="el" href="../../db/d10/class_game_manager.html">GameManager</a>, este metodo obtiene el objeto creado. </p>
+<p>Solo se puede crear un objeto de la clase <a class="el" href="../../db/d10/class_game_manager.html" title="Administrador principal del juegol, indica las fases en que se ordena el ciclo de juego.">GameManager</a>, este metodo obtiene el objeto creado. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00034">34</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
@@ -447,7 +454,7 @@ Events</h2></td></tr>
 
 <p>Pausa el juego. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00177">177</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00178">178</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -468,7 +475,7 @@ Events</h2></td></tr>
 
 <p>Inicia el juego. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00164">164</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00165">165</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -489,7 +496,7 @@ Events</h2></td></tr>
 
 <p>Reanuda el juego si estuvo pausado. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00186">186</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00187">187</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -508,7 +515,7 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00099">99</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00101">101</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -527,7 +534,9 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00267">267</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p>Actualiza el siguiente nivel y guarda dicho escenario en caso de querer continuar donde te quedaste. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00270">270</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -548,7 +557,7 @@ Events</h2></td></tr>
 
 <p>Inicia el juego. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00171">171</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00172">172</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -567,7 +576,7 @@ Events</h2></td></tr>
 
 <p>Clip musical que se reproduce en el juego. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00139">139</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00141">141</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -585,7 +594,7 @@ Events</h2></td></tr>
 
 <p>Clip musical que se reproduce cuando pierdes el nivel. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00143">143</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00145">145</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -603,7 +612,7 @@ Events</h2></td></tr>
 
 <p>Clip musical que se reproduce cuando se completa el nivel. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00141">141</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00143">143</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -621,7 +630,7 @@ Events</h2></td></tr>
 
 <p>Nombre del nivel que vera el jugador. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00147">147</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00149">149</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -637,7 +646,9 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00046">46</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p>Objeto que crea numeros psudoaleatorios. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00047">47</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -653,7 +664,9 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00047">47</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p>Objeto alterno que crea numeros psudoaleatorios para propositos adicionales. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00049">49</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -671,7 +684,7 @@ Events</h2></td></tr>
 
 <p>Objeto que funciona como delimitador interno de los limites del escenario. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00145">145</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00147">147</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -696,7 +709,7 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00122">122</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00124">124</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -722,7 +735,7 @@ Events</h2></td></tr>
 
 <p>Regresa la puntuacion del nivel. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00106">106</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00108">108</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -748,7 +761,7 @@ Events</h2></td></tr>
 
 <p>Indica si el juego no esta pausado ni terminado. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00070">70</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00072">72</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -774,7 +787,7 @@ Events</h2></td></tr>
 
 <p>Indica si el juego termino (nivel completado o es Game Over) </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00068">68</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00070">70</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -800,7 +813,7 @@ Events</h2></td></tr>
 
 <p>Indica si perdiste en el juego. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00091">91</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00093">93</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -826,7 +839,7 @@ Events</h2></td></tr>
 
 <p>Indica si el juego esta pausado. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00077">77</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00079">79</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -852,7 +865,7 @@ Events</h2></td></tr>
 
 <p>Indica si el juego empezo (Y ya se puede contar los procesos de GameOver y LevelCleared) </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00064">64</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00066">66</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -878,7 +891,7 @@ Events</h2></td></tr>
 
 <p>Indica si el juego se encuentra en modo de invencibilidad, al estar asi no puedes perder. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00098">98</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00100">100</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -904,7 +917,7 @@ Events</h2></td></tr>
 
 <p>Indica si el nivel del juego fue completado. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00084">84</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00086">86</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -928,7 +941,7 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00117">117</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00119">119</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -952,7 +965,7 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00114">114</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00116">116</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -971,7 +984,7 @@ Events</h2></td></tr>
 
 <p>@hidden </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00157">157</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00159">159</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -989,7 +1002,7 @@ Events</h2></td></tr>
 
 <p>@hidden </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00159">159</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00161">161</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -1007,7 +1020,7 @@ Events</h2></td></tr>
 
 <p>@hidden </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00160">160</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00162">162</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -1025,7 +1038,7 @@ Events</h2></td></tr>
 
 <p>@hidden </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00158">158</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00160">160</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -1043,7 +1056,7 @@ Events</h2></td></tr>
 
 <p>@hidden </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00155">155</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00157">157</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -1061,7 +1074,7 @@ Events</h2></td></tr>
 
 <p>@hidden </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00153">153</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00155">155</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -1079,7 +1092,7 @@ Events</h2></td></tr>
 
 <p>@hidden </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00156">156</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00158">158</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>
@@ -1097,7 +1110,7 @@ Events</h2></td></tr>
 
 <p>@hidden </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00154">154</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d22/_game_manager_8cs_source.html#l00156">156</a> of file <a class="el" href="../../d4/d22/_game_manager_8cs_source.html">GameManager.cs</a>.</p>
 
 </div>
 </div>

@@ -104,6 +104,9 @@ $(function(){initNavTree('d7/d01/class_administrador_de_persistencia.html','../.
   <div class="headertitle"><div class="title">AdministradorDePersistencia Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Administrador que guarda y carga los objetos de la clase persistente.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for AdministradorDePersistencia:</div>
 <div class="dyncontent">
@@ -114,21 +117,27 @@ Inheritance diagram for AdministradorDePersistencia:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3703d8ba52bc954071c1b4f7a6cc2497" id="r_a3703d8ba52bc954071c1b4f7a6cc2497"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3703d8ba52bc954071c1b4f7a6cc2497">OnEnable</a> ()</td></tr>
+<tr class="memdesc:a3703d8ba52bc954071c1b4f7a6cc2497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Habilita la carga de objetos.  <br /></td></tr>
 <tr class="separator:a3703d8ba52bc954071c1b4f7a6cc2497"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa29a8232c7abea9bb9aba8388f26da02" id="r_aa29a8232c7abea9bb9aba8388f26da02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa29a8232c7abea9bb9aba8388f26da02">OnDisable</a> ()</td></tr>
+<tr class="memdesc:aa29a8232c7abea9bb9aba8388f26da02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cuando se cierra el escenario se guardan los objetos.  <br /></td></tr>
 <tr class="separator:aa29a8232c7abea9bb9aba8388f26da02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60a517a10352e084d5c45148437170fc" id="r_a60a517a10352e084d5c45148437170fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60a517a10352e084d5c45148437170fc">CargarCambios</a> ()</td></tr>
+<tr class="memdesc:a60a517a10352e084d5c45148437170fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que carga los cambios.  <br /></td></tr>
 <tr class="separator:a60a517a10352e084d5c45148437170fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a704b6da335a68da3aaf4da4273611491" id="r_a704b6da335a68da3aaf4da4273611491"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a704b6da335a68da3aaf4da4273611491">GuardarCambios</a> ()</td></tr>
+<tr class="memdesc:a704b6da335a68da3aaf4da4273611491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que guarda los cambios.  <br /></td></tr>
 <tr class="separator:a704b6da335a68da3aaf4da4273611491"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a0cd317a125678a74b4fc6e40d3fe5a1c" id="r_a0cd317a125678a74b4fc6e40d3fe5a1c"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="../../d5/d33/class_objeto_persistente.html">ObjetoPersistente</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cd317a125678a74b4fc6e40d3fe5a1c">ObjetosAGuardar</a></td></tr>
+<tr class="memdesc:a0cd317a125678a74b4fc6e40d3fe5a1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista de los objetos de clase <a class="el" href="../../d5/d33/class_objeto_persistente.html" title="Scriptable object con funciones de guardar y cargar cuando otro scriptable object hija es modificada ...">ObjetoPersistente</a> que se guardaran.  <br /></td></tr>
 <tr class="separator:a0cd317a125678a74b4fc6e40d3fe5a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>Administrador que guarda y carga los objetos de la clase persistente. </p>
+
 <p class="definition">Definition at line <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html#l00008">8</a> of file <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html">AdministradorDePersistencia.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a60a517a10352e084d5c45148437170fc" name="a60a517a10352e084d5c45148437170fc"></a>
@@ -146,7 +155,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html">AdministradorDePersistencia.cs</a>.</p>
+<p>Metodo que carga los cambios. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html#l00023">23</a> of file <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html">AdministradorDePersistencia.cs</a>.</p>
 
 </div>
 </div>
@@ -165,7 +176,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html#l00027">27</a> of file <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html">AdministradorDePersistencia.cs</a>.</p>
+<p>Metodo que guarda los cambios. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html#l00032">32</a> of file <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html">AdministradorDePersistencia.cs</a>.</p>
 
 </div>
 </div>
@@ -184,7 +197,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html#l00015">15</a> of file <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html">AdministradorDePersistencia.cs</a>.</p>
+<p>Cuando se cierra el escenario se guardan los objetos. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html">AdministradorDePersistencia.cs</a>.</p>
 
 </div>
 </div>
@@ -203,7 +218,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html#l00011">11</a> of file <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html">AdministradorDePersistencia.cs</a>.</p>
+<p>Habilita la carga de objetos. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html#l00013">13</a> of file <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html">AdministradorDePersistencia.cs</a>.</p>
 
 </div>
 </div>
@@ -220,7 +237,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html#l00010">10</a> of file <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html">AdministradorDePersistencia.cs</a>.</p>
+<p>Lista de los objetos de clase <a class="el" href="../../d5/d33/class_objeto_persistente.html" title="Scriptable object con funciones de guardar y cargar cuando otro scriptable object hija es modificada ...">ObjetoPersistente</a> que se guardaran. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html#l00011">11</a> of file <a class="el" href="../../d2/d08/_administrador_de_persistencia_8cs_source.html">AdministradorDePersistencia.cs</a>.</p>
 
 </div>
 </div>

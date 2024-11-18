@@ -103,28 +103,35 @@ $(function(){initNavTree('d5/d33/class_objeto_persistente.html','../../'); initR
   <div class="headertitle"><div class="title">ObjetoPersistente Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Scriptable object con funciones de guardar y cargar cuando otro scriptable object hija es modificada dentro del juego.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ObjetoPersistente:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="../../d5/d33/class_objeto_persistente.png" usemap="#ObjetoPersistente_map" alt=""/>
   <map id="ObjetoPersistente_map" name="ObjetoPersistente_map">
-<area href="../../dd/d8f/class_high_score.html" alt="HighScore" shape="rect" coords="0,112,111,136"/>
-<area href="../../d5/db9/class_opciones.html" alt="Opciones" shape="rect" coords="121,112,232,136"/>
+<area href="../../dd/d8f/class_high_score.html" title="Aqui se gestiona las puntuaciones mas altas." alt="HighScore" shape="rect" coords="0,112,111,136"/>
+<area href="../../d5/db9/class_opciones.html" title="Aqui se gestiona los valores de musica y sonido." alt="Opciones" shape="rect" coords="121,112,232,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a76e701d41e369253aa1d6d6320ed224d" id="r_a76e701d41e369253aa1d6d6320ed224d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76e701d41e369253aa1d6d6320ed224d">Guardar</a> (string NameFile=null)</td></tr>
+<tr class="memdesc:a76e701d41e369253aa1d6d6320ed224d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guarda el objeto persistente en un archivo en formato JSON.  <br /></td></tr>
 <tr class="separator:a76e701d41e369253aa1d6d6320ed224d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a226291b512b4e7c48c111d430f769836" id="r_a226291b512b4e7c48c111d430f769836"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a226291b512b4e7c48c111d430f769836">Cargar</a> (string NameFile=null)</td></tr>
+<tr class="memdesc:a226291b512b4e7c48c111d430f769836"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carga el objeto persistente en un archivo en formato JSON.  <br /></td></tr>
 <tr class="separator:a226291b512b4e7c48c111d430f769836"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b115bf74ba03ee0b4ed91a5c51b8ac7" id="r_a5b115bf74ba03ee0b4ed91a5c51b8ac7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b115bf74ba03ee0b4ed91a5c51b8ac7">ObtenerRuta</a> (string NameFile=null)</td></tr>
+<tr class="memdesc:a5b115bf74ba03ee0b4ed91a5c51b8ac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guarda el objeto persistente en un archivo en formato JSON.  <br /></td></tr>
 <tr class="separator:a5b115bf74ba03ee0b4ed91a5c51b8ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>Scriptable object con funciones de guardar y cargar cuando otro scriptable object hija es modificada dentro del juego. </p>
+
 <p class="definition">Definition at line <a class="el" href="../../d9/de5/_objeto_persistente_8cs_source.html#l00010">10</a> of file <a class="el" href="../../d9/de5/_objeto_persistente_8cs_source.html">ObjetoPersistente.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a226291b512b4e7c48c111d430f769836" name="a226291b512b4e7c48c111d430f769836"></a>
@@ -150,7 +157,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/de5/_objeto_persistente_8cs_source.html#l00020">20</a> of file <a class="el" href="../../d9/de5/_objeto_persistente_8cs_source.html">ObjetoPersistente.cs</a>.</p>
+<p>Carga el objeto persistente en un archivo en formato JSON. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NameFile</td><td>Nombre del archivo </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/de5/_objeto_persistente_8cs_source.html#l00026">26</a> of file <a class="el" href="../../d9/de5/_objeto_persistente_8cs_source.html">ObjetoPersistente.cs</a>.</p>
 
 </div>
 </div>
@@ -169,7 +184,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/de5/_objeto_persistente_8cs_source.html#l00012">12</a> of file <a class="el" href="../../d9/de5/_objeto_persistente_8cs_source.html">ObjetoPersistente.cs</a>.</p>
+<p>Guarda el objeto persistente en un archivo en formato JSON. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NameFile</td><td>Nombre del archivo </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/de5/_objeto_persistente_8cs_source.html#l00015">15</a> of file <a class="el" href="../../d9/de5/_objeto_persistente_8cs_source.html">ObjetoPersistente.cs</a>.</p>
 
 </div>
 </div>
@@ -188,7 +211,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/de5/_objeto_persistente_8cs_source.html#l00030">30</a> of file <a class="el" href="../../d9/de5/_objeto_persistente_8cs_source.html">ObjetoPersistente.cs</a>.</p>
+<p>Guarda el objeto persistente en un archivo en formato JSON. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NameFile</td><td>Nombre del archivo </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/de5/_objeto_persistente_8cs_source.html#l00039">39</a> of file <a class="el" href="../../d9/de5/_objeto_persistente_8cs_source.html">ObjetoPersistente.cs</a>.</p>
 
 </div>
 </div>

@@ -105,6 +105,9 @@ $(function(){initNavTree('d9/db2/class_menu_manager.html','../../'); initResizab
   <div class="headertitle"><div class="title">MenuManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Archivo principal que maneja los menus del juego.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for MenuManager:</div>
 <div class="dyncontent">
@@ -129,12 +132,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae871afbbb6d3dbb1b6133ec0370dc26a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desactiva los menus activos y borra la lista de menus actual.  <br /></td></tr>
 <tr class="separator:ae871afbbb6d3dbb1b6133ec0370dc26a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a9e92d82573c127b77ac062eabe85c6" id="r_a7a9e92d82573c127b77ac062eabe85c6"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a9e92d82573c127b77ac062eabe85c6">GetMenu</a> (string name)</td></tr>
+<tr class="memdesc:a7a9e92d82573c127b77ac062eabe85c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el menu pedido.  <br /></td></tr>
 <tr class="separator:a7a9e92d82573c127b77ac062eabe85c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a9858f83c6ae8800021575fe723620278" id="r_a9858f83c6ae8800021575fe723620278"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d9/db2/class_menu_manager.html">MenuManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9858f83c6ae8800021575fe723620278">GetSingleton</a> ()</td></tr>
-<tr class="memdesc:a9858f83c6ae8800021575fe723620278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solo se puede crear un objeto de la clase <a class="el" href="../../d9/db2/class_menu_manager.html">MenuManager</a>, este metodo obtiene el objeto creado.  <br /></td></tr>
+<tr class="memdesc:a9858f83c6ae8800021575fe723620278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solo se puede crear un objeto de la clase <a class="el" href="../../d9/db2/class_menu_manager.html" title="Archivo principal que maneja los menus del juego.">MenuManager</a>, este metodo obtiene el objeto creado.  <br /></td></tr>
 <tr class="separator:a9858f83c6ae8800021575fe723620278"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -143,16 +147,21 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a62410394bbc02dae33f6530de40b9cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Para navegar entre menus cada vez que se abre uno nueva se agrega a esta lista y en caso de salir y regresar al anterior se elimina el mas reciente para desplegar el anterior.  <br /></td></tr>
 <tr class="separator:a62410394bbc02dae33f6530de40b9cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad52c6a0b8ed469ad8cc7cb021366e138" id="r_ad52c6a0b8ed469ad8cc7cb021366e138"><td class="memItemLeft" align="right" valign="top">List&lt; GameObject &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad52c6a0b8ed469ad8cc7cb021366e138">lstMenus</a></td></tr>
+<tr class="memdesc:ad52c6a0b8ed469ad8cc7cb021366e138"><td class="mdescLeft">&#160;</td><td class="mdescRight">Menus disponibles para buscar y activar.  <br /></td></tr>
 <tr class="separator:ad52c6a0b8ed469ad8cc7cb021366e138"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1309fc1f78ca8269a383ae39618eda4c" id="r_a1309fc1f78ca8269a383ae39618eda4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/db9/class_opciones.html">Opciones</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1309fc1f78ca8269a383ae39618eda4c">opciones</a></td></tr>
+<tr class="memdesc:a1309fc1f78ca8269a383ae39618eda4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">@hidden  <br /></td></tr>
 <tr class="separator:a1309fc1f78ca8269a383ae39618eda4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac29820094e1a08aa024aba67dea3c881" id="r_ac29820094e1a08aa024aba67dea3c881"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d8f/class_high_score.html">HighScore</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac29820094e1a08aa024aba67dea3c881">highScore</a></td></tr>
+<tr class="memdesc:ac29820094e1a08aa024aba67dea3c881"><td class="mdescLeft">&#160;</td><td class="mdescRight">@hidden  <br /></td></tr>
 <tr class="separator:ac29820094e1a08aa024aba67dea3c881"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6672263909bd4e74312a2e9d29c684c5" id="r_a6672263909bd4e74312a2e9d29c684c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d1c/class_menu_confirmar.html">MenuConfirmar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6672263909bd4e74312a2e9d29c684c5">menuConfirmar</a></td></tr>
+<tr class="memdesc:a6672263909bd4e74312a2e9d29c684c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objeto de la clase <a class="el" href="../../de/d1c/class_menu_confirmar.html" title="Menu que se abre para advertir al jugador si desea realizar alguna accion, en caso de que el jugador ...">MenuConfirmar</a>.  <br /></td></tr>
 <tr class="separator:a6672263909bd4e74312a2e9d29c684c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>Archivo principal que maneja los menus del juego. </p>
+
 <p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00011">11</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aad2883c0e7a937df7f4ecf941a04ed19" name="aad2883c0e7a937df7f4ecf941a04ed19"></a>
@@ -172,7 +181,7 @@ Public Attributes</h2></td></tr>
 
 <p>Elimina el menu actual y despliega el anterior de este. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00071">71</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00070">70</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
 
 </div>
 </div>
@@ -193,7 +202,7 @@ Public Attributes</h2></td></tr>
 
 <p>Desactiva los menus activos y borra la lista de menus actual. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00114">114</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00113">113</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
 
 </div>
 </div>
@@ -212,7 +221,16 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00122">122</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
+<p>Obtiene el menu pedido. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Nombre del menu buscado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>GameObject que representa el menu </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00126">126</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
 
 </div>
 </div>
@@ -239,9 +257,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Solo se puede crear un objeto de la clase <a class="el" href="../../d9/db2/class_menu_manager.html">MenuManager</a>, este metodo obtiene el objeto creado. </p>
+<p>Solo se puede crear un objeto de la clase <a class="el" href="../../d9/db2/class_menu_manager.html" title="Archivo principal que maneja los menus del juego.">MenuManager</a>, este metodo obtiene el objeto creado. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00032">32</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00033">33</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
 
 </div>
 </div>
@@ -269,7 +287,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00101">101</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00100">100</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
 
 </div>
 </div>
@@ -297,7 +315,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00087">87</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00086">86</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
 
 </div>
 </div>
@@ -314,7 +332,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00046">46</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
+<p>@hidden </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00048">48</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
 
 </div>
 </div>
@@ -330,7 +350,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00044">44</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
+<p>Menus disponibles para buscar y activar. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00046">46</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
 
 </div>
 </div>
@@ -348,7 +370,7 @@ Public Attributes</h2></td></tr>
 
 <p>Para navegar entre menus cada vez que se abre uno nueva se agrega a esta lista y en caso de salir y regresar al anterior se elimina el mas reciente para desplegar el anterior. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00043">43</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00044">44</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
 
 </div>
 </div>
@@ -364,7 +386,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00047">47</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
+<p>Objeto de la clase <a class="el" href="../../de/d1c/class_menu_confirmar.html" title="Menu que se abre para advertir al jugador si desea realizar alguna accion, en caso de que el jugador ...">MenuConfirmar</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00050">50</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
 
 </div>
 </div>
@@ -380,7 +404,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00045">45</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
+<p>@hidden </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html#l00047">47</a> of file <a class="el" href="../../d1/ddd/_menu_manager_8cs_source.html">MenuManager.cs</a>.</p>
 
 </div>
 </div>

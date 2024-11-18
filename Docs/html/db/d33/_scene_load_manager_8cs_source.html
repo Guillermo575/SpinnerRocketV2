@@ -107,28 +107,36 @@ $(function(){initNavTree('db/d33/_scene_load_manager_8cs_source.html','../../');
 <div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../d4/d2c/class_scene_load_manager.html">    9</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d4/d2c/class_scene_load_manager.html">SceneLoadManager</a> : MonoBehaviour</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d4/d2c/class_scene_load_manager.html#a75c9893ab00acbe86cbfc92d28a07add">   11</a></span>    <span class="keyword">public</span> Image <a class="code hl_variable" href="../../d4/d2c/class_scene_load_manager.html#a75c9893ab00acbe86cbfc92d28a07add">fadeImage</a>; <span class="comment">// Imagen que se usará para el desvanecimiento</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d4/d2c/class_scene_load_manager.html#a373a296ff2fb14f9728b505dc4d21472">   12</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="../../d4/d2c/class_scene_load_manager.html#a373a296ff2fb14f9728b505dc4d21472">fadeDuration</a> = 0.8f; <span class="comment">// Duración del desvanecimiento</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">void</span> Start()</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        StartCoroutine(FadeOut());</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">private</span> IEnumerator FadeOut()</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordtype">float</span> alpha = 1f;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">while</span> (alpha &gt; 0f)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            alpha -= Time.deltaTime / <a class="code hl_variable" href="../../d4/d2c/class_scene_load_manager.html#a373a296ff2fb14f9728b505dc4d21472">fadeDuration</a>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            fadeImage.color = <span class="keyword">new</span> Color(0f, 0f, 0f, alpha);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            yield <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_variable" href="../../d4/d2c/class_scene_load_manager.html#a75c9893ab00acbe86cbfc92d28a07add">fadeImage</a>.gameObject.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">    #region Variables</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d4/d2c/class_scene_load_manager.html#a75c9893ab00acbe86cbfc92d28a07add">   13</a></span>    <span class="keyword">public</span> Image <a class="code hl_variable" href="../../d4/d2c/class_scene_load_manager.html#a75c9893ab00acbe86cbfc92d28a07add">fadeImage</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d4/d2c/class_scene_load_manager.html#a373a296ff2fb14f9728b505dc4d21472">   15</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="../../d4/d2c/class_scene_load_manager.html#a373a296ff2fb14f9728b505dc4d21472">fadeDuration</a> = 0.8f;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">    #endregion</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">    #region Start</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> Start()</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        StartCoroutine(FadeOut());</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">    #endregion</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">    #region General</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">private</span> IEnumerator FadeOut()</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordtype">float</span> alpha = 1f;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">while</span> (alpha &gt; 0f)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            alpha -= Time.deltaTime / <a class="code hl_variable" href="../../d4/d2c/class_scene_load_manager.html#a373a296ff2fb14f9728b505dc4d21472">fadeDuration</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            fadeImage.color = <span class="keyword">new</span> Color(0f, 0f, 0f, alpha);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            yield <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_variable" href="../../d4/d2c/class_scene_load_manager.html#a75c9893ab00acbe86cbfc92d28a07add">fadeImage</a>.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">    #endregion</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
 </div>
-<div class="ttc" id="aclass_scene_load_manager_html"><div class="ttname"><a href="../../d4/d2c/class_scene_load_manager.html">SceneLoadManager</a></div><div class="ttdef"><b>Definition</b> <a href="#l00009">SceneLoadManager.cs:10</a></div></div>
-<div class="ttc" id="aclass_scene_load_manager_html_a373a296ff2fb14f9728b505dc4d21472"><div class="ttname"><a href="../../d4/d2c/class_scene_load_manager.html#a373a296ff2fb14f9728b505dc4d21472">SceneLoadManager.fadeDuration</a></div><div class="ttdeci">float fadeDuration</div><div class="ttdef"><b>Definition</b> <a href="#l00012">SceneLoadManager.cs:12</a></div></div>
-<div class="ttc" id="aclass_scene_load_manager_html_a75c9893ab00acbe86cbfc92d28a07add"><div class="ttname"><a href="../../d4/d2c/class_scene_load_manager.html#a75c9893ab00acbe86cbfc92d28a07add">SceneLoadManager.fadeImage</a></div><div class="ttdeci">Image fadeImage</div><div class="ttdef"><b>Definition</b> <a href="#l00011">SceneLoadManager.cs:11</a></div></div>
+<div class="ttc" id="aclass_scene_load_manager_html"><div class="ttname"><a href="../../d4/d2c/class_scene_load_manager.html">SceneLoadManager</a></div><div class="ttdoc">Clase que maneja el desvanecimiento de un objeto, sirve para hacer transiciones entre escenario.</div><div class="ttdef"><b>Definition</b> <a href="#l00009">SceneLoadManager.cs:10</a></div></div>
+<div class="ttc" id="aclass_scene_load_manager_html_a373a296ff2fb14f9728b505dc4d21472"><div class="ttname"><a href="../../d4/d2c/class_scene_load_manager.html#a373a296ff2fb14f9728b505dc4d21472">SceneLoadManager.fadeDuration</a></div><div class="ttdeci">float fadeDuration</div><div class="ttdoc">Duración del desvanecimiento.</div><div class="ttdef"><b>Definition</b> <a href="#l00015">SceneLoadManager.cs:15</a></div></div>
+<div class="ttc" id="aclass_scene_load_manager_html_a75c9893ab00acbe86cbfc92d28a07add"><div class="ttname"><a href="../../d4/d2c/class_scene_load_manager.html#a75c9893ab00acbe86cbfc92d28a07add">SceneLoadManager.fadeImage</a></div><div class="ttdeci">Image fadeImage</div><div class="ttdoc">Imagen que se usará para el desvanecimiento.</div><div class="ttdef"><b>Definition</b> <a href="#l00013">SceneLoadManager.cs:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
