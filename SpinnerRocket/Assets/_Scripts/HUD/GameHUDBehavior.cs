@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 /**
- * @file
+ * @class
  * @brief Administra las funciones de la interfaz de usuario
  */
 public class GameHUDBehavior : MonoBehaviour

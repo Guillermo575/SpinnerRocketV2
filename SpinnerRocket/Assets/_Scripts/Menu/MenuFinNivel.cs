@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 /**
- * @file
+ * @class
  * @brief Clase que sirve para manejar los metodos de los menus que aparecen al finalizar el nivel (ganar o perder)
  */
 public class MenuFinNivel : _Menu

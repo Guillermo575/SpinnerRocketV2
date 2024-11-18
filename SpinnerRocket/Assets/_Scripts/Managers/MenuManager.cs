@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 /**
- * @file
+ * @class
  * @brief Archivo principal que maneja los menus del juego
  */
 public class MenuManager : MonoBehaviour

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 /**
- * @file
+ * @class
  * @brief Aqui se gestiona las puntuaciones mas altas
  */
 [CreateAssetMenu(fileName = "Opciones", menuName = "Tools/HighScore", order = 1)]

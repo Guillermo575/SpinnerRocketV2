@@ -6,7 +6,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 /**
- * @file
+ * @class
  * @brief Administrador principal del juegol, indica las fases en que se ordena el ciclo de juego
  */
 public class GameManager : MonoBehaviour

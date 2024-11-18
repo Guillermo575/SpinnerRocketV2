@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /**
- * @file
+ * @class
  * @brief Aqui se gestiona los valores de musica y sonido
  */
 [CreateAssetMenu(fileName = "Opciones", menuName = "Tools/Opciones", order = 1)]

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 /**
- * @file
+ * @class
  * @brief Clase que maneja el desvanecimiento de un objeto, sirve para hacer transiciones entre escenario
  */
 public class SceneLoadManager : MonoBehaviour

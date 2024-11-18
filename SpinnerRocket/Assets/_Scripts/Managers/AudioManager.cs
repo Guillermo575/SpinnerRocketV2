@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Rendering;
 /**
- * @file
+ * @class
  * @brief Administra el audiomixer 
  */
 public class AudioManager : MonoBehaviour

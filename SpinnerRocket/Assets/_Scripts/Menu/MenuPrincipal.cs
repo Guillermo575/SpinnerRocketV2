@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 /**
- * @file
+ * @class
  * @brief Menu que se abre al iniciar la aplicacion
  */
 public class MenuPrincipal : _Menu

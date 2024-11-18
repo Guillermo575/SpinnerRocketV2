@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 /**
- * @file
+ * @class
  * @brief Reloj que cuenta los segundos transcurridos
  */
 public class GameTimeWatch : MonoBehaviour

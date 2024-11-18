@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 /**
- * @file
+ * @class
  * @brief Clase que genera numeros pseudoaleatorios en base a una semilla inicial
  */
 public class MathRNG

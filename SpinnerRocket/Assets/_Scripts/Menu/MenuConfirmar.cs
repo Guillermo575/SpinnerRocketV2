@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 /**
- * @file
+ * @class
  * @brief Menu que se abre para advertir al jugador si desea realizar alguna accion,
  * en caso de que el jugador seleccione que si se ejecutara un evento generico
  */

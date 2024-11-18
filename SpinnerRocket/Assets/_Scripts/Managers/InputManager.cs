@@ -7,7 +7,7 @@ using UnityEngine.InputSystem.EnhancedTouch;
 using UnityEngine.Windows;
 using static InputManager.ActionMap.Action;
 /**
- * @file
+ * @class
  * @brief maneja los inputs del proyecto
  */
 public class InputManager : MonoBehaviour

@@ -8,7 +8,7 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 /**
- * @file
+ * @class
  * @brief Menu que se abre al pausar el juego
  */
 public class MenuPausa : _Menu
