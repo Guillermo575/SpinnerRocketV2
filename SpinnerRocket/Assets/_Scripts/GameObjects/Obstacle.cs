@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using UnityEngine;
-/**
- * @class
- * @brief GameObject del juego: Objetos moviles cuya funcion es la de colisionar con el jugador
- */
 namespace GameElement
 {
+    /**
+     * @class
+     * @brief GameObject del juego: Objetos moviles cuya funcion es la de colisionar con el jugador
+     */
     public class Obstacle : MonoBehaviour
     {
         #region Variables privada

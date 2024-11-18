@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using UnityEngine;
-/**
- * @class
- * @brief GameObject del juego: Puerta del nivel que debe de acceder el jugador para completar el nivel
- */
 namespace GameElement
 {
+    /**
+     * @class
+     * @brief GameObject del juego: Puerta del nivel que debe de acceder el jugador para completar el nivel
+     */
     public class DoorLevel : MonoBehaviour
     {
         #region Unity Variables

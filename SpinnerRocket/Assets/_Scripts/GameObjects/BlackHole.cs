@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
-/**
- * @class
- * @brief GameObject del juego: Agujero negro que arrastrara al jugador hacia su centro si se acerca al area de colision
- */
 namespace GameElement
 {
+    /**
+     * @class
+     * @brief GameObject del juego: Agujero negro que arrastrara al jugador hacia su centro si se acerca al area de colision
+     */
     public class BlackHole : MonoBehaviour
     {
         #region Variables
