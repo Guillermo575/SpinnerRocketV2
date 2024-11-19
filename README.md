@@ -18,3 +18,6 @@ Bézier Path Creator - Sebastian Lague
  * @param clip: pista seleccionada
  * @param ReiniciarRepetido: en caso de que se reproduzca la misma pista de sonido reiniciara la pista (desactivado por defecto)
  */
+ 
+EULA: https://www.termsfeed.com/live/ca47881b-ddd6-4d12-b019-517365d3ad71
+Politicy: https://www.termsfeed.com/live/78fef234-593f-44c0-8641-65f86a52fec1
