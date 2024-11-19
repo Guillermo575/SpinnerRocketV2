@@ -10,3 +10,11 @@ Space Music - Nia Mi
 
 
 Bézier Path Creator - Sebastian Lague
+
+/** @hidden*/
+/** Inicializacion de los objetos */
+/**
+ * Reproduce musica de fondo
+ * @param clip: pista seleccionada
+ * @param ReiniciarRepetido: en caso de que se reproduzca la misma pista de sonido reiniciara la pista (desactivado por defecto)
+ */

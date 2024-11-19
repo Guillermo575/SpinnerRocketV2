@@ -212,5 +212,17 @@ public class GameHUDBehavior : MonoBehaviour
         }
         return ret;
     }
+    /** Pausa/reanuda el juego actual */
+    public void PauseGame()
+    {
+        if (objGameManager.IsGamePause)
+        {
+            objGameManager.ResumeGame();
+        }
+        else
+        {
+            objGameManager.PauseGame();
+        }
+    }
     #endregion
 }
