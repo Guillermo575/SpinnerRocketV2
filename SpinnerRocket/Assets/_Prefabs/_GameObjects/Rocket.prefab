@@ -1444,8 +1444,8 @@ MonoBehaviour:
   ClipStarPick: {fileID: 8300000, guid: daee664f1615e074e9cc13586e78eb11, type: 3}
   ClipExplosion: {fileID: 8300000, guid: 856fb15c46427cd4ba89a434e247af84, type: 3}
   RotationXMin: 180
-  SpeedMovement: 15
-  DecreaseSpeed: 0.2
+  SpeedMovement: 20
+  DecreaseSpeed: 0.6
   IncreaseSpeed: 0.8
 --- !u!82 &-224450461679689358
 AudioSource:

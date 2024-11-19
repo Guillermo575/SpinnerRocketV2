@@ -463,6 +463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9041308687983642125}
   - component: {fileID: 4425909272202267215}
+  - component: {fileID: 2704680816514306177}
   m_Layer: 0
   m_Name: WindowInputManager
   m_TagString: Untagged
@@ -501,6 +502,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WindowKeyBoard: {fileID: 834418198860987244}
   WindowGamePad: {fileID: 8450022992951270230}
+--- !u!114 &2704680816514306177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003094307106458652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e876bd0e0198348a2f0ee4f1e8f79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3306935946957081381
 GameObject:
   m_ObjectHideFlags: 0
