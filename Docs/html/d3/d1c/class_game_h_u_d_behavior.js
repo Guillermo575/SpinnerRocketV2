@@ -6,6 +6,7 @@ var class_game_h_u_d_behavior =
       [ "Timer", "d3/d1c/class_game_h_u_d_behavior.html#ab79e4af72c77516ff2484e1dd90051afaefb4777327e6f704fb1519c1882f93ec", null ]
     ] ],
     [ "GetRecord", "d3/d1c/class_game_h_u_d_behavior.html#ad2db1c4aad13b89fe15099783eb0adaa", null ],
+    [ "PauseGame", "d3/d1c/class_game_h_u_d_behavior.html#af9e32660ea79d2f4d20ad8ef0bf4fb2d", null ],
     [ "setScore", "d3/d1c/class_game_h_u_d_behavior.html#a962c257d18aa51ede8b37c70e39c65d5", null ],
     [ "setStarCurrent", "d3/d1c/class_game_h_u_d_behavior.html#aa9a3b79822bbbe352e21ba637bc28610", null ],
     [ "SetTimerRecord", "d3/d1c/class_game_h_u_d_behavior.html#ad9a1aeb61af7299e52348b15415cd06c", null ],

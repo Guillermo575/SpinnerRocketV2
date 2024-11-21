@@ -28,6 +28,7 @@ var searchData=
   ['getrecord_25',['GetRecord',['../d3/d1c/class_game_h_u_d_behavior.html#ad2db1c4aad13b89fe15099783eb0adaa',1,'GameHUDBehavior']]],
   ['getscore_26',['GetScore',['../db/d10/class_game_manager.html#a9c0c41a04aee6a092138ef5e2e358586',1,'GameManager.GetScore'],['../dd/d8f/class_high_score.html#a35b0ed31aedcecfe443dee29def0d508',1,'HighScore.GetScore()']]],
   ['getsingleton_27',['GetSingleton',['../d3/d1c/class_game_h_u_d_behavior.html#a898442148fd260f8b3d8540a6bcb3220',1,'GameHUDBehavior.GetSingleton()'],['../d9/d56/class_game_time_watch.html#abdfd7baabc652edadbbad49b3f2d3a39',1,'GameTimeWatch.GetSingleton()'],['../d7/d31/class_audio_manager.html#a85d0aa46020e09000c6ff8acd024fb08',1,'AudioManager.GetSingleton()'],['../db/d10/class_game_manager.html#a804426a15491d1c85ea6803933314f2f',1,'GameManager.GetSingleton()'],['../df/dd1/class_input_manager.html#ab2fe949f247503b4f55de9058c31f2e4',1,'InputManager.GetSingleton()'],['../d9/db2/class_menu_manager.html#a9858f83c6ae8800021575fe723620278',1,'MenuManager.GetSingleton()']]],
-  ['guardar_28',['Guardar',['../d5/d33/class_objeto_persistente.html#a76e701d41e369253aa1d6d6320ed224d',1,'ObjetoPersistente']]],
-  ['guardarcambios_29',['GuardarCambios',['../d7/d01/class_administrador_de_persistencia.html#a704b6da335a68da3aaf4da4273611491',1,'AdministradorDePersistencia']]]
+  ['gpgstext_28',['GPGSText',['../d5/d3f/class_administrador_g_p_g_s.html#a356d93446dce2ebda97f3d44c6d4c0e1',1,'AdministradorGPGS']]],
+  ['guardar_29',['Guardar',['../d5/d33/class_objeto_persistente.html#a76e701d41e369253aa1d6d6320ed224d',1,'ObjetoPersistente']]],
+  ['guardarcambios_30',['GuardarCambios',['../d7/d01/class_administrador_de_persistencia.html#a704b6da335a68da3aaf4da4273611491',1,'AdministradorDePersistencia']]]
 ];

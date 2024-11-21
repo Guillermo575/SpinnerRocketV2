@@ -6,7 +6,9 @@ var searchData=
   ['addscore_3',['AddScore',['../db/d10/class_game_manager.html#a38a21ca041a9a71e63702dbc3e7c28f1',1,'GameManager']]],
   ['administradordepersistencia_4',['AdministradorDePersistencia',['../d7/d01/class_administrador_de_persistencia.html',1,'']]],
   ['administradordepersistencia_2ecs_5',['AdministradorDePersistencia.cs',['../d2/d08/_administrador_de_persistencia_8cs.html',1,'']]],
-  ['audiomanager_6',['AudioManager',['../d7/d31/class_audio_manager.html',1,'']]],
-  ['audiomanager_2ecs_7',['AudioManager.cs',['../dd/dd3/_audio_manager_8cs.html',1,'']]],
-  ['audiomixer_8',['audioMixer',['../d7/d31/class_audio_manager.html#a1081038ce7267a4cace96e1a50ab1470',1,'AudioManager']]]
+  ['administradorgpgs_6',['AdministradorGPGS',['../d5/d3f/class_administrador_g_p_g_s.html',1,'']]],
+  ['administradorgpgs_2ecs_7',['AdministradorGPGS.cs',['../d4/d69/_administrador_g_p_g_s_8cs.html',1,'']]],
+  ['audiomanager_8',['AudioManager',['../d7/d31/class_audio_manager.html',1,'']]],
+  ['audiomanager_2ecs_9',['AudioManager.cs',['../dd/dd3/_audio_manager_8cs.html',1,'']]],
+  ['audiomixer_10',['audioMixer',['../d7/d31/class_audio_manager.html#a1081038ce7267a4cace96e1a50ab1470',1,'AudioManager']]]
 ];

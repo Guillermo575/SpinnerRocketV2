@@ -4,7 +4,7 @@ var searchData=
   ['particlebling_1',['ParticleBling',['../d2/dd7/class_game_element_1_1_player.html#a99512a87c4adc06cda243909805af6fb',1,'GameElement::Player']]],
   ['particleburst_2',['ParticleBurst',['../d2/dd7/class_game_element_1_1_player.html#a1bc35066a365280e88c9e10236dbd936',1,'GameElement::Player']]],
   ['particlelaunch_3',['ParticleLaunch',['../d2/dd7/class_game_element_1_1_player.html#aa00364fd31f8f021d19cb8b73435f7d2',1,'GameElement::Player']]],
-  ['pausegame_4',['PauseGame',['../db/d10/class_game_manager.html#adb110a6ef474e4ac7901176c97a859ab',1,'GameManager']]],
+  ['pausegame_4',['PauseGame',['../d3/d1c/class_game_h_u_d_behavior.html#af9e32660ea79d2f4d20ad8ef0bf4fb2d',1,'GameHUDBehavior.PauseGame()'],['../db/d10/class_game_manager.html#adb110a6ef474e4ac7901176c97a859ab',1,'GameManager.PauseGame()']]],
   ['player_5',['Player',['../d2/dd7/class_game_element_1_1_player.html',1,'GameElement']]],
   ['player_2ecs_6',['Player.cs',['../d5/dbb/_player_8cs.html',1,'']]],
   ['playsound_7',['PlaySound',['../d7/d31/class_audio_manager.html#aab1607aa6226ecb21451669a164b8db3',1,'AudioManager']]],

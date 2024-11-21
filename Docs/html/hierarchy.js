@@ -6,6 +6,7 @@ var hierarchy =
     [ "MathRNG", "d4/d9f/class_math_r_n_g.html", null ],
     [ "MonoBehaviour", null, [
       [ "AdministradorDePersistencia", "d7/d01/class_administrador_de_persistencia.html", null ],
+      [ "AdministradorGPGS", "d5/d3f/class_administrador_g_p_g_s.html", null ],
       [ "AudioManager", "d7/d31/class_audio_manager.html", null ],
       [ "GameCameraBehavior", "d8/dc6/class_game_camera_behavior.html", null ],
       [ "GameCheatMode", "d3/d7a/class_game_cheat_mode.html", null ],
@@ -21,6 +22,7 @@ var hierarchy =
       [ "InputWindowKeyBoard", "d1/d48/class_input_window_key_board.html", null ],
       [ "MenuManager", "d9/db2/class_menu_manager.html", null ],
       [ "ObjectActiveAtStart", "db/ddd/class_object_active_at_start.html", null ],
+      [ "ObjectHideAndroid", "dd/da9/class_object_hide_android.html", null ],
       [ "ObjectHideNoAndroid", "d2/d08/class_object_hide_no_android.html", null ],
       [ "ObjectInvisibleAtStart", "da/d98/class_object_invisible_at_start.html", null ],
       [ "SceneLoadManager", "d4/d2c/class_scene_load_manager.html", null ],
