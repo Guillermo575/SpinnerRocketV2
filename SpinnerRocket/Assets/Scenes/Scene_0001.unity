@@ -273,7 +273,7 @@ PrefabInstance:
     - target: {fileID: 1791429416225357449, guid: 24420bc9fd3891c4e8badb65135c05b6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.22
+      value: -10.62
       objectReference: {fileID: 0}
     - target: {fileID: 1791429416225357449, guid: 24420bc9fd3891c4e8badb65135c05b6,
         type: 3}
@@ -493,6 +493,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WindowInputManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279256209005061431, guid: fb51927249321c54c9b583979700acd3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -7.04
       objectReference: {fileID: 0}
     - target: {fileID: 9041308687983642125, guid: fb51927249321c54c9b583979700acd3,
         type: 3}
@@ -935,7 +940,7 @@ PrefabInstance:
     - target: {fileID: 1883409075437698891, guid: a97bdb658bbcc5b4788de6b06fd4149b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.07
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1883409075437698891, guid: a97bdb658bbcc5b4788de6b06fd4149b,
         type: 3}
