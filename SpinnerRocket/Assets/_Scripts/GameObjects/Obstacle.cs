@@ -27,6 +27,8 @@ namespace GameElement
         public bool IsStalker = false;
         /** Rango de deteccion para que el objeto persiga al objetivo en caso de que la variable IsStalker sea verdadera */
         public float StalkRange = 12;
+        /** Angulo de giro adicional en caso de que el modelo no se mueva hacia el frente */
+        public float OffsetAngle = 90;
         #endregion
 
         #region General
@@ -100,11 +102,10 @@ namespace GameElement
         public void RotateTowards(Vector2 target)
         {
             var targetPosition = target == null ? new Vector2(0f, 0f) : target;
-            var offset = 180f;
             Vector2 direction = (Vector2)transform.position - targetPosition;
             direction.Normalize();
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(Vector3.forward * (angle + offset));
+            transform.rotation = Quaternion.Euler(Vector3.forward * (angle + OffsetAngle));
         }
         #endregion
     }
