@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: textura_Neon_Estrella
+  m_Name: textura_Neon_Rocket
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -64,7 +64,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: b538532f760bf0641878e9344849e729, type: 3}
+        m_Texture: {fileID: 2800000, guid: bc19dc69b77462b479433342fc4c9e7b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -135,7 +135,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0.003921569}
     - _Color: {r: 1, g: 1, b: 1, a: 0.003921569}
-    - _EmissionColor: {r: 2.6390157, g: 2.6390157, b: 2.6390157, a: 1}
+    - _EmissionColor: {r: 4.541205, g: 4.541205, b: 4.541205, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
