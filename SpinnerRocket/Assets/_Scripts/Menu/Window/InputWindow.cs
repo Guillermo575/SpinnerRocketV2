@@ -12,12 +12,14 @@ public class InputWindow : MonoBehaviour
     public GameObject WindowKeyBoard;
     /** Objeto que representa la ventana de gamepad */
     public GameObject WindowGamePad;
+    GameManager gameManager;
     #endregion
 
     #region Start & Update
     /** Inicializacion de los objetos */
     void Start()
     {
+        gameManager = GameManager.GetSingleton();
         EnableControllers();
     }
     /** Metodo de actualizacion de objetos */
@@ -32,8 +34,8 @@ public class InputWindow : MonoBehaviour
     private void EnableControllers()
     {
         var controllers = Input.GetJoystickNames();
-        WindowKeyBoard.SetActive(controllers.Length == 0);
-        WindowGamePad.SetActive(controllers.Length > 0);
+        WindowKeyBoard.SetActive(controllers.Length == 0 && gameManager.IsGameActive);
+        WindowGamePad.SetActive(controllers.Length > 0 && gameManager.IsGameActive);
     }
     #endregion
 }
