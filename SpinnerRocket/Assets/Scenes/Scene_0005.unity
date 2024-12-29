@@ -279,7 +279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &410087040
 Light:
   m_ObjectHideFlags: 0
@@ -408,6 +408,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 623160659}
   - {fileID: 1270016033}
   - {fileID: 2044983280}
   - {fileID: 607436225}
@@ -493,7 +494,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 438473796}
     m_Modifications:
     - target: {fileID: 1747888073975581704, guid: 4ef4c195897b25944bdc9bf028c2ff16,
         type: 3}
@@ -518,17 +519,17 @@ PrefabInstance:
     - target: {fileID: 1747888073975581704, guid: 4ef4c195897b25944bdc9bf028c2ff16,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1747888073975581704, guid: 4ef4c195897b25944bdc9bf028c2ff16,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1747888073975581704, guid: 4ef4c195897b25944bdc9bf028c2ff16,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1747888073975581704, guid: 4ef4c195897b25944bdc9bf028c2ff16,
         type: 3}
@@ -555,6 +556,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ef4c195897b25944bdc9bf028c2ff16, type: 3}
+--- !u!4 &623160659 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1747888073975581704, guid: 4ef4c195897b25944bdc9bf028c2ff16,
+    type: 3}
+  m_PrefabInstance: {fileID: 623160658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &810048440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1900,4 +1907,3 @@ SceneRoots:
   - {fileID: 1322415628}
   - {fileID: 1445232518}
   - {fileID: 438473796}
-  - {fileID: 623160658}
