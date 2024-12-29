@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Material_Asteroid
+  m_Name: Material_Neon_Asteroid
   m_Shader: {fileID: -6465566751694194690, guid: 58d6e76d6e1557d43972b2c684637ee2,
     type: 3}
   m_Parent: {fileID: 0}
