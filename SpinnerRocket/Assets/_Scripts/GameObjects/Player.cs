@@ -181,17 +181,26 @@ namespace GameElement
                 }
                 if (CollisionTag == "Star")
                 {
-                    PlayClip(ClipStarPick);
-                    ParticleBling.Play();
-                    gameObject.transform.position = new Vector3(gameManager.mathRNG.NextValueFloat(-9, 9), gameManager.mathRNG.NextValueFloat(-5, 5), 0);
-                    gameManager.AddScore(1);
+                    var StarAnimator = gameObject.GetComponent<Animator>();
+                    if (!StarAnimator.GetBool("Giro"))
+                    {
+                        PlayClip(ClipStarPick);
+                        //ParticleBling.Play();
+                        gameObject.transform.position = new Vector3(gameManager.mathRNG.NextValueFloat(-9, 9), gameManager.mathRNG.NextValueFloat(-5, 5), 0);
+                        gameManager.AddScore(1);
+                    }
                 }
                 if (CollisionTag == "StarLevel")
                 {
-                    var objRender = gameObject.GetComponent<Renderer>();
-                    if (objRender.enabled)
+                    var StarAnimator = gameObject.GetComponent<Animator>();
+                    if (!StarAnimator.GetBool("Giro"))
                     {
-                        StartCoroutine(CoroutineStarPick(objRender));
+                        StarAnimator.SetBool("Giro", true);
+                        var objRender = gameObject.GetComponent<Renderer>();
+                        if (objRender.enabled)
+                        {
+                            StartCoroutine(CoroutineStarPick(objRender));
+                        }
                     }
                 }
                 if (gameObject.tag == "Obstaculo" && !gameManager.IsGameEnd && !gameManager.IsInvencibleMode)
@@ -205,12 +214,13 @@ namespace GameElement
         IEnumerator CoroutineStarPick(Renderer objRender)
         {
             PlayClip(ClipStarPick);
-            ParticleBling.Play();
-            objRender.enabled = false;
+            //ParticleBling.Play();
             gameManager.AddScore(1);
             Time.timeScale = 0.1f;
             yield return new WaitForSecondsRealtime(0.1f);
             Time.timeScale = 1;
+            yield return new WaitForSecondsRealtime(1f);
+            objRender.enabled = false;
         }
         /** Courutina que se activa al morir a causa de una colision */
         IEnumerator CoroutineDeath()

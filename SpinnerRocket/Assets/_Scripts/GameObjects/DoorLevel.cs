@@ -24,7 +24,16 @@ namespace GameElement
         void Update()
         {
             var objects = GameObject.FindGameObjectsWithTag("StarLevel").Where(obj => obj.GetComponent<Renderer>().enabled).ToList();
-            if(objects.Count() == 0 && !animator.GetBool("Opened") && !GameManager.IsLevelCleared)
+            var EstrellasTomadas = true;
+            foreach (var obj in objects)
+            {
+                var StarAnimator = obj.GetComponent<Animator>();
+                if (!StarAnimator.GetBool("Giro"))
+                {
+                    EstrellasTomadas = false;
+                }
+            }
+            if(EstrellasTomadas && !animator.GetBool("Opened") && !GameManager.IsLevelCleared)
             {
                 //GameManager.objGameAudioBehavior.PlaySoundEffect(GameManager.objGameAudioBehavior.ClipDoorOpen);
                 animator.SetBool("Opened", true);
