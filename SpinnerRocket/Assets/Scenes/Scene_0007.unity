@@ -2666,7 +2666,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1599824670}
     - target: {fileID: 8435619723983062977, guid: d2d13f5efc09ab64dacbe6ebcee5ffb4,
         type: 3}
       propertyPath: smoothFactor
