@@ -76,12 +76,14 @@ var NAVTREEINDEX0 =
 "d2/de8/class_game_element_1_1_obstacle.html#a04f2e90d270f5b06b7390a86de18f0b5":[1,0,0,2,2],
 "d2/de8/class_game_element_1_1_obstacle.html#a0d734a4b41909c45d51f184c2c80691c":[0,0,0,2,0],
 "d2/de8/class_game_element_1_1_obstacle.html#a0d734a4b41909c45d51f184c2c80691c":[1,0,0,2,0],
-"d2/de8/class_game_element_1_1_obstacle.html#a96301f3aa78acc54173f05ee2258e770":[0,0,0,2,3],
-"d2/de8/class_game_element_1_1_obstacle.html#a96301f3aa78acc54173f05ee2258e770":[1,0,0,2,3],
+"d2/de8/class_game_element_1_1_obstacle.html#a96301f3aa78acc54173f05ee2258e770":[0,0,0,2,4],
+"d2/de8/class_game_element_1_1_obstacle.html#a96301f3aa78acc54173f05ee2258e770":[1,0,0,2,4],
+"d2/de8/class_game_element_1_1_obstacle.html#a99d6f4db59fd01b7a591fcc1c730f5f6":[0,0,0,2,3],
+"d2/de8/class_game_element_1_1_obstacle.html#a99d6f4db59fd01b7a591fcc1c730f5f6":[1,0,0,2,3],
 "d2/de8/class_game_element_1_1_obstacle.html#abfc589e0c198bd2d3d7e72873f819e04":[0,0,0,2,1],
 "d2/de8/class_game_element_1_1_obstacle.html#abfc589e0c198bd2d3d7e72873f819e04":[1,0,0,2,1],
-"d2/de8/class_game_element_1_1_obstacle.html#afe68faa7012b92ed7dcf24c4d4cfdae6":[0,0,0,2,4],
-"d2/de8/class_game_element_1_1_obstacle.html#afe68faa7012b92ed7dcf24c4d4cfdae6":[1,0,0,2,4],
+"d2/de8/class_game_element_1_1_obstacle.html#afe68faa7012b92ed7dcf24c4d4cfdae6":[0,0,0,2,5],
+"d2/de8/class_game_element_1_1_obstacle.html#afe68faa7012b92ed7dcf24c4d4cfdae6":[1,0,0,2,5],
 "d3/d1c/class_game_h_u_d_behavior.html":[1,0,7],
 "d3/d1c/class_game_h_u_d_behavior.html#a4a6eee399d503622874e027201334276":[1,0,7,6],
 "d3/d1c/class_game_h_u_d_behavior.html#a5cc96437f95aee91dee10f06cf3ccf04":[1,0,7,10],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "db/d10/class_game_manager.html":[1,0,8],
 "db/d10/class_game_manager.html#a03fd61ba426af55397e2bee764ba452f":[1,0,8,32],
 "db/d10/class_game_manager.html#a12ea2117ea4eb83b57073251f674fb3d":[1,0,8,27],
-"db/d10/class_game_manager.html#a195f9ebd7466c918e4ccb5de13027696":[1,0,8,25],
-"db/d10/class_game_manager.html#a1d1eb453e2394e4c6ee5435356744b8c":[1,0,8,6],
-"db/d10/class_game_manager.html#a213d20a1db0cf77868d718ed76d8fe4c":[1,0,8,19]
+"db/d10/class_game_manager.html#a195f9ebd7466c918e4ccb5de13027696":[1,0,8,25]
 };

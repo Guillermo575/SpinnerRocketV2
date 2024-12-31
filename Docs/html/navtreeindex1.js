@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"db/d10/class_game_manager.html#a1d1eb453e2394e4c6ee5435356744b8c":[1,0,8,6],
+"db/d10/class_game_manager.html#a213d20a1db0cf77868d718ed76d8fe4c":[1,0,8,19],
 "db/d10/class_game_manager.html#a278108184f54b68a4160abac0e7182f9":[1,0,8,11],
 "db/d10/class_game_manager.html#a2a3fa7076ecadd3084827a7208cd4771":[1,0,8,20],
 "db/d10/class_game_manager.html#a2cf81794b638afb3fca3944e64e146ac":[1,0,8,14],
@@ -51,6 +53,7 @@ var NAVTREEINDEX1 =
 "db/df3/class_menu_principal.html#a64dcb6b4c3d8c3993c0f3ad880e3518a":[1,0,19,6],
 "db/df3/class_menu_principal.html#a6605a0eaa1930c1e411eec080bcf16a7":[1,0,19,0],
 "db/df3/class_menu_principal.html#a6ac9b11e8f3dfada88b33f10d94a475b":[1,0,19,5],
+"db/df3/class_menu_principal.html#acae0e4b97f4ea2adf4b05878792ad265":[1,0,19,8],
 "db/df3/class_menu_principal.html#ada427905300c14e015af40885e023d9a":[1,0,19,4],
 "db/df3/class_menu_principal.html#ae16cd620a3676880719ee7064155c602":[1,0,19,1],
 "db/df3/class_menu_principal.html#ae94e280d4f077ea1f0922b4028952ef6":[1,0,19,2],

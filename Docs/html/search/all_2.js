@@ -6,6 +6,7 @@ var searchData=
   ['blackhole_3',['BlackHole',['../d0/d08/class_game_element_1_1_black_hole.html',1,'GameElement']]],
   ['blackhole_2ecs_4',['BlackHole.cs',['../d0/dce/_black_hole_8cs.html',1,'']]],
   ['border_5',['Border',['../d7/d5f/class_spawn_object.html#ab81f45c2626011fc212c1fe04c4d96f8a070554647306343cbea29ebfdd278ba8',1,'SpawnObject']]],
-  ['btnsoundoff_6',['btnSoundOFF',['../d3/d1c/class_game_h_u_d_behavior.html#abf3bc3632721546b354e7a65c8be7b75',1,'GameHUDBehavior']]],
-  ['btnsoundon_7',['btnSoundON',['../d3/d1c/class_game_h_u_d_behavior.html#a711895ad3d26fe3df9f088ab1232d82a',1,'GameHUDBehavior']]]
+  ['btncontinue_6',['btnContinue',['../db/df3/class_menu_principal.html#acae0e4b97f4ea2adf4b05878792ad265',1,'MenuPrincipal']]],
+  ['btnsoundoff_7',['btnSoundOFF',['../d3/d1c/class_game_h_u_d_behavior.html#abf3bc3632721546b354e7a65c8be7b75',1,'GameHUDBehavior']]],
+  ['btnsoundon_8',['btnSoundON',['../d3/d1c/class_game_h_u_d_behavior.html#a711895ad3d26fe3df9f088ab1232d82a',1,'GameHUDBehavior']]]
 ];

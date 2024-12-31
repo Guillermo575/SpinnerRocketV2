@@ -7,5 +7,6 @@ var class_menu_principal =
     [ "IniciarJuego", "db/df3/class_menu_principal.html#ada427905300c14e015af40885e023d9a", null ],
     [ "MostrarCreditos", "db/df3/class_menu_principal.html#a6ac9b11e8f3dfada88b33f10d94a475b", null ],
     [ "MostrarOpciones", "db/df3/class_menu_principal.html#a64dcb6b4c3d8c3993c0f3ad880e3518a", null ],
-    [ "Start", "db/df3/class_menu_principal.html#a5edf0eca6021c73dc6ef38879284455c", null ]
+    [ "Start", "db/df3/class_menu_principal.html#a5edf0eca6021c73dc6ef38879284455c", null ],
+    [ "btnContinue", "db/df3/class_menu_principal.html#acae0e4b97f4ea2adf4b05878792ad265", null ]
 ];
