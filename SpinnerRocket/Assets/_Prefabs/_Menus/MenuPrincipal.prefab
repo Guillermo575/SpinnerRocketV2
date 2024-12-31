@@ -315,6 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17b62979ac90a884bafc16b44b711748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  btnContinue: {fileID: 7918820293505829927}
 --- !u!1 &5284500977918443403
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,7 +647,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLAY
+  m_text: NEW GAME
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6085ff64ca0c4f349b1e039426076f20, type: 2}
   m_sharedMaterial: {fileID: 2717042074549877592, guid: 6085ff64ca0c4f349b1e039426076f20,
